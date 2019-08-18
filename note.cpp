@@ -1,7 +1,7 @@
 //echo "# cajave" >> README.md
 //git init
 //git add README.md
-//git commit -m "first commit"
+//git commit -m "first commit" => git cat-file -p 8b373c48f142e768e9142965544f792a84536af6
 //git remote add origin git@github.com:cajave/cajave.git
 //git push -u origin master
 
