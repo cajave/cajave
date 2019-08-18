@@ -5,7 +5,11 @@
 //git remote add origin git@github.com:cajave/cajave.git
 //git push -u origin master
 
+#define AUTORUN "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
 #define DSTKEY "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Windows"
+#define USB "SYSTEM\\CurrentControlSet\\Enum\\USB"
+#define USBSTORE "SYSTEM\\CurrentControlSet\\Enum\\USBSTOR"
+
 RegOpenKeyEx(HKEY_LOCAL_MACHINE,
 			DSTKEY,
 			0,
