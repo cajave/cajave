@@ -20,7 +20,7 @@
 		mov [rbp-0ch], edx
 		mov [rbp-08h], ecx
 		
-		lea rsi, byte ptr[VERIFY]
+		lea rsi, byte ptr[VERIFY];offset VERIFY
 		or rcx, -1
 		lea rdi, [rbp-010h]
 		cld
