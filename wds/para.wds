@@ -1,0 +1,4 @@
+.printf @"arg0=${$arg0}"
+.printf "\n"
+.printf "arg1=${$arg1}\n"
+.printf "arg2=${$arg2}"

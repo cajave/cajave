@@ -1,0 +1,18 @@
+.foreach /pS 6 /ps 7 (var {~})
+{
+	.if ($scmp("${var}", "Unfrozen") == 0)
+	{
+		.printf "${var}\n"
+		.continue
+	}
+	.elsif ($vvalid(${var}, 4))
+	{
+		r $t0 = var
+		.printf "Teb=%p\n", @$t0
+		r? $t1 = @@c++(((ntdll!_TEB*)@$t0)->NtTib.StackBase)
+		r? $t2 = @@c++(((ntdll!_TEB*)@$t0)->NtTib.StackLimit)
+		.printf "StackBase = %p\nStackLimit = %p\n", @$t1, @$t2
+		dps @esp @$t1
+		.printf "============================================\n"
+	}
+}

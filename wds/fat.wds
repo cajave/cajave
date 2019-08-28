@@ -1,0 +1,19 @@
+.for(r $t0=@esp; @$t0<@esp+0x1000; r $t0=@$t0+4)
+{
+	.if ($vvalid(@$t0, 4) & $vvalid(@$t0+4, 4))
+	{	
+		r $t1=poi(@$t0)
+		r $t2=poi(@$t0+4)
+		.if ($vvalid(@$t1, 4) & $vvalid(@$t2, 4))
+		{
+			r $t3=@@c++(((_EXCEPTION_RECORD*)@$t1)->ExceptionAddress)
+			.if(@$t3 == 0x7263ee21)
+			{
+				.printf "exception address:0x%x\n", @$t1
+				dt _EXCEPTION_RECORD @$t1
+				.printf "context address:0x%x\n", @$t2
+				dt _CONTEXT @$t2
+			}
+		}
+	}
+} 

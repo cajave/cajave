@@ -1,0 +1,961 @@
+---- iterator Matches (1231 in 78 files) ----
+Alg_test.cpp (test\unit):    slist<int>::iterator slit = search_n(slint.begin(), slint.end(), 2, 2);
+Alg_test.cpp (test\unit):    list<int>::iterator lit = search_n(lint.begin(), lint.end(), 3, 3);
+Alg_test.cpp (test\unit):    deque<int>::iterator dit = search_n(dint.begin(), dint.end(), 4, 4);
+Alg_test.cpp (test\unit):    slist<int>::iterator slit = search_n(slint.begin(), slint.end(), 2, 1, greater<int>());
+Alg_test.cpp (test\unit):    list<int>::iterator lit = search_n(lint.begin(), lint.end(), 3, 2, greater<int>());
+Alg_test.cpp (test\unit):    deque<int>::iterator dit = search_n(dint.begin(), dint.end(), 4, 3, greater<int>());
+Alg_test.cpp (test\unit):    vector<int>::iterator first;
+Alg_test.cpp (test\unit):    vector<int>::iterator first;
+Alg_test.cpp (test\unit):    vector<int>::iterator first;
+Alg_test.cpp (test\unit):    vector<int>::iterator first;
+Alg_test.cpp (test\unit):    vector<int>::iterator first;
+Alg_test.cpp (test\unit):    vector<int>::iterator first;
+Alg_test.cpp (test\unit):    vector<int>::iterator first;
+Alg_test.cpp (test\unit):    vector<MyIntComparable>::iterator first;
+Alg_test.cpp (test\unit):  map<int, string>::iterator i = find_first_of(m.begin(), m.end(), values.begin(), values.end(), ValueFinder());
+Bound_test.cpp (test\unit):  vector<int>::iterator location = lower_bound(v1.begin(), v1.end(), 3);
+_bvector.h (stlport\stl):  typedef _STLP_PRIV _Bit_iterator          iterator;
+_bvector.h (stlport\stl):    this->_M_start = iterator(__q, 0);
+_bvector.h (stlport\stl):  void _M_insert_aux(iterator __position, bool __x) {
+_bvector.h (stlport\stl):      iterator __i = _STLP_STD::copy(begin(), __position, iterator(__q, 0));
+_bvector.h (stlport\stl):      this->_M_start = iterator(__q, 0);
+_bvector.h (stlport\stl):  void _M_insert_range(iterator __pos,
+_bvector.h (stlport\stl):  void _M_insert_range(iterator __position,
+_bvector.h (stlport\stl):        iterator __i = _STLP_STD::copy(begin(), __position, iterator(__q, 0));
+_bvector.h (stlport\stl):        this->_M_start = iterator(__q, 0);
+_bvector.h (stlport\stl):  iterator begin() { return this->_M_start; }
+_bvector.h (stlport\stl):  iterator end() { return this->_M_finish; }
+_bvector.h (stlport\stl):    iterator __cur = begin();
+_bvector.h (stlport\stl):      this->_M_start = iterator(__q, 0);
+_bvector.h (stlport\stl):  iterator insert(iterator __position, bool __x = bool()) {
+_bvector.h (stlport\stl):  void _M_insert_dispatch(iterator __pos, _Integer __n, _Integer __x,
+_bvector.h (stlport\stl):  void _M_insert_dispatch(iterator __pos,
+_bvector.h (stlport\stl):  void insert(iterator __position,
+_bvector.h (stlport\stl):  void insert(iterator __position,
+_bvector.h (stlport\stl):      iterator __i = _STLP_STD::copy(begin(), __position, iterator(__q, 0));
+_bvector.h (stlport\stl):      this->_M_start = iterator(__q, 0);
+_bvector.h (stlport\stl):  void insert(iterator __position, const bool* __first, const bool* __last) {
+_bvector.h (stlport\stl):      iterator __i = _STLP_STD::copy(begin(), __position, iterator(__q, 0));
+_bvector.h (stlport\stl):      this->_M_start = iterator(__q, 0);
+_bvector.h (stlport\stl):  void _M_fill_insert(iterator __position, size_type __n, bool __x) {
+_bvector.h (stlport\stl):      iterator __i = _STLP_STD::copy(begin(), __position, iterator(__q, 0));
+_bvector.h (stlport\stl):      this->_M_start = iterator(__q, 0);
+_bvector.h (stlport\stl):  void insert(iterator __position, size_type __n, bool __x) {
+_bvector.h (stlport\stl):  iterator erase(iterator __position) {
+_bvector.h (stlport\stl):  iterator erase(iterator __first, iterator __last) {
+Copy_test.cpp (test\unit):#include <iterator>
+_debug.c (stlport\stl\debug):_STLP_STRING_LITERAL("Taking an iterator out of destroyed (or otherwise corrupted) container"),       \
+_debug.c (stlport\stl\debug):_STLP_STRING_LITERAL("Past-the-end iterator could not be erased"),  \
+_debug.c (stlport\stl\debug):_STLP_STRING_LITERAL("Container doesn't own the iterator"),  \
+_debug.c (stlport\stl\debug):_STLP_STRING_LITERAL("Container is owner of the iterator, but should not"),  \
+_debug.c (stlport\stl\debug):_STLP_STRING_LITERAL("Uninitialized or invalidated (by mutating operation) iterator used"),  \
+_debug.c (stlport\stl\debug):_STLP_STRING_LITERAL("Uninitialized or invalidated (by mutating operation) lefthand iterator in expression"),  \
+_debug.c (stlport\stl\debug):_STLP_STRING_LITERAL("Uninitialized or invalidated (by mutating operation) righthand iterator in expression"),  \
+_debug.c (stlport\stl\debug):_STLP_STRING_LITERAL("The advance would produce invalid iterator"),  \
+_deque.c (stlport\stl):#  define iterator       __iterator__
+_deque.c (stlport\stl):#  define __iterator__   _STLP_TYPENAME_ON_RETURN_TYPE deque<_Tp, _Alloc>::iterator
+_deque.c (stlport\stl):void deque<_Tp, _Alloc >::_M_fill_insert(iterator __pos,
+_deque.c (stlport\stl):    iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.c (stlport\stl):    iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.c (stlport\stl):void deque<_Tp, _Alloc>::insert(iterator __pos,
+_deque.c (stlport\stl):    iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.c (stlport\stl):    iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.c (stlport\stl):void deque<_Tp,_Alloc>::insert(iterator __pos,
+_deque.c (stlport\stl):    iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.c (stlport\stl):    iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.c (stlport\stl):__iterator__ deque<_Tp,_Alloc>::_M_erase(iterator __pos,
+_deque.c (stlport\stl):    iterator __src = __pos, __dst = __pos;
+_deque.c (stlport\stl):    iterator __src = __pos, __dst = __pos;
+_deque.c (stlport\stl):__iterator__ deque<_Tp,_Alloc>::_M_erase(iterator __pos,
+_deque.c (stlport\stl):  iterator __next = __pos;
+_deque.c (stlport\stl):__iterator__ deque<_Tp,_Alloc>::_M_erase(iterator __first, iterator __last,
+_deque.c (stlport\stl):    iterator __src = __first, __dst = __last;
+_deque.c (stlport\stl):    iterator __new_start = this->_M_start + __n;
+_deque.c (stlport\stl):      iterator __src = __last, __dst = __first;
+_deque.c (stlport\stl):    iterator __new_finish = this->_M_finish - __n;
+_deque.c (stlport\stl):__iterator__ deque<_Tp,_Alloc>::_M_erase(iterator __first, iterator __last,
+_deque.c (stlport\stl):    iterator __new_start = this->_M_start + __n;
+_deque.c (stlport\stl):    iterator __new_finish = this->_M_finish - __n;
+_deque.c (stlport\stl):  _STLP_UNWIND(_STLP_STD::_Destroy_Range(this->_M_start, iterator(*__cur, __cur)))
+_deque.c (stlport\stl):__iterator__ deque<_Tp,_Alloc>::_M_fill_insert_aux(iterator __pos, size_type __n,
+_deque.c (stlport\stl):    iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.c (stlport\stl):      iterator __dst = __new_start;
+_deque.c (stlport\stl):      iterator __src = this->_M_start;
+_deque.c (stlport\stl):    iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.c (stlport\stl):      iterator __dst = __new_finish;
+_deque.c (stlport\stl):      iterator __src = this->_M_finish;
+_deque.c (stlport\stl):__iterator__ deque<_Tp,_Alloc>::_M_fill_insert_aux(iterator __pos, size_type __n,
+_deque.c (stlport\stl):    iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.c (stlport\stl):    iterator __old_start = this->_M_start;
+_deque.c (stlport\stl):        iterator __start_n = this->_M_start + difference_type(__n);
+_deque.c (stlport\stl):    iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.c (stlport\stl):    iterator __old_finish = this->_M_finish;
+_deque.c (stlport\stl):        iterator __finish_n = this->_M_finish - difference_type(__n);
+_deque.c (stlport\stl):void deque<_Tp,_Alloc>::_M_insert_range_aux(iterator __pos,
+_deque.c (stlport\stl):    iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.c (stlport\stl):      iterator __dst = __new_start;
+_deque.c (stlport\stl):      iterator __src = this->_M_start;
+_deque.c (stlport\stl):    iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.c (stlport\stl):      iterator __dst = __new_finish;
+_deque.c (stlport\stl):      iterator __src = this->_M_finish;
+_deque.c (stlport\stl):void deque<_Tp,_Alloc>::_M_insert_range_aux(iterator __pos,
+_deque.c (stlport\stl):    iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.c (stlport\stl):    iterator __old_start = this->_M_start;
+_deque.c (stlport\stl):        iterator __start_n = this->_M_start + difference_type(__n);
+_deque.c (stlport\stl):    iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.c (stlport\stl):    iterator __old_finish = this->_M_finish;
+_deque.c (stlport\stl):        iterator __finish_n = this->_M_finish - difference_type(__n);
+_deque.c (stlport\stl):void deque<_Tp,_Alloc>::_M_insert_range_aux(iterator __pos,
+_deque.c (stlport\stl):    iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.c (stlport\stl):      iterator __dst = __new_start;
+_deque.c (stlport\stl):      iterator __src = this->_M_start;
+_deque.c (stlport\stl):    iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.c (stlport\stl):      iterator __dst = __new_finish;
+_deque.c (stlport\stl):      iterator __src = this->_M_finish;
+_deque.c (stlport\stl):void deque<_Tp,_Alloc>::_M_insert_range_aux(iterator __pos,
+_deque.c (stlport\stl):    iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.c (stlport\stl):    iterator __old_start = this->_M_start;
+_deque.c (stlport\stl):        iterator __start_n = this->_M_start + __n;
+_deque.c (stlport\stl):    iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.c (stlport\stl):    iterator __old_finish = this->_M_finish;
+_deque.c (stlport\stl):        iterator __finish_n = this->_M_finish - difference_type(__n);
+_deque.c (stlport\stl):#undef iterator
+_deque.h (stlport\stl):  typedef _Deque_iterator<_Tp, _Nonconst_traits<_Tp> > iterator;
+_deque.h (stlport\stl):  iterator _M_start;
+_deque.h (stlport\stl):  iterator _M_finish;
+_deque.h (stlport\stl):  iterator begin() { return this->_M_start; }
+_deque.h (stlport\stl):  iterator end() { return this->_M_finish; }
+_deque.h (stlport\stl):    iterator __tmp = this->_M_finish;
+_deque.h (stlport\stl):    iterator __cur = begin();
+_deque.h (stlport\stl):  iterator insert(iterator __pos, const value_type& __x = _STLP_DEFAULT_CONSTRUCTED(_Tp)) {
+_deque.h (stlport\stl):  iterator insert(iterator __pos, const value_type& __x) {
+_deque.h (stlport\stl):      iterator __tmp = this->_M_finish;
+_deque.h (stlport\stl):  iterator insert(iterator __pos)
+_deque.h (stlport\stl):  void insert(iterator __pos, size_type __n, const value_type& __x)
+_deque.h (stlport\stl):  iterator _M_fill_insert_aux(iterator __pos, size_type __n, const value_type& __x, const __true_type& /*_Movable*/);
+_deque.h (stlport\stl):  iterator _M_fill_insert_aux(iterator __pos, size_type __n, const value_type& __x, const __false_type& /*_Movable*/);
+_deque.h (stlport\stl):  void _M_fill_insert(iterator __pos, size_type __n, const value_type& __x);
+_deque.h (stlport\stl):  void _M_insert_dispatch(iterator __pos, _Integer __n, _Integer __x,
+_deque.h (stlport\stl):  void _M_insert_dispatch(iterator __pos,
+_deque.h (stlport\stl):  void insert(iterator __pos, _InputIterator __first, _InputIterator __last) {
+_deque.h (stlport\stl):  void _M_insert_range_aux(iterator __pos,
+_deque.h (stlport\stl):  void _M_insert_range_aux(iterator __pos,
+_deque.h (stlport\stl):  void _M_insert_range_aux(iterator __pos,
+_deque.h (stlport\stl):  void _M_insert_range_aux(iterator __pos,
+_deque.h (stlport\stl):  void insert(iterator __pos,
+_deque.h (stlport\stl):  void insert(iterator __pos,
+_deque.h (stlport\stl):  iterator _M_erase(iterator __pos, const __true_type& /*_Movable*/);
+_deque.h (stlport\stl):  iterator _M_erase(iterator __pos, const __false_type& /*_Movable*/);
+_deque.h (stlport\stl):  iterator _M_erase(iterator __first, iterator __last, const __true_type& /*_Movable*/);
+_deque.h (stlport\stl):  iterator _M_erase(iterator __first, iterator __last, const __false_type& /*_Movable*/);
+_deque.h (stlport\stl):  iterator erase(iterator __pos) {
+_deque.h (stlport\stl):  iterator erase(iterator __first, iterator __last) {
+_deque.h (stlport\stl):  _STLP_UNWIND(_STLP_STD::_Destroy_Range(this->_M_start, iterator(*__cur_node, __cur_node)))
+_deque.h (stlport\stl):  void _M_insert(iterator __pos,
+_deque.h (stlport\stl):  void  _M_insert(iterator __pos,
+_deque.h (stlport\stl):      iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.h (stlport\stl):      iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.h (stlport\stl):  void _M_insert_range_aux(iterator __pos,
+_deque.h (stlport\stl):      iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.h (stlport\stl):        iterator __dst = __new_start;
+_deque.h (stlport\stl):        iterator __src = this->_M_start;
+_deque.h (stlport\stl):      iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.h (stlport\stl):        iterator __dst = __new_finish;
+_deque.h (stlport\stl):        iterator __src = this->_M_finish;
+_deque.h (stlport\stl):  void _M_insert_range_aux(iterator __pos,
+_deque.h (stlport\stl):      iterator __new_start = _M_reserve_elements_at_front(__n);
+_deque.h (stlport\stl):      iterator __old_start = this->_M_start;
+_deque.h (stlport\stl):          iterator __start_n = this->_M_start + difference_type(__n);
+_deque.h (stlport\stl):      iterator __new_finish = _M_reserve_elements_at_back(__n);
+_deque.h (stlport\stl):      iterator __old_finish = this->_M_finish;
+_deque.h (stlport\stl):          iterator __finish_n = this->_M_finish - difference_type(__n);
+_deque.h (stlport\stl):  iterator _M_reserve_elements_at_front(size_type __n) {
+_deque.h (stlport\stl):  iterator _M_reserve_elements_at_back(size_type __n) {
+_deque.h (stlport\stl\debug):  void _Invalidate_iterator(const iterator& __it)
+_deque.h (stlport\stl\debug):  void _Invalidate_iterators(const iterator& __first, const iterator& __last)
+_deque.h (stlport\stl\debug):  iterator begin() { return iterator(&_M_iter_list, _M_non_dbg_impl.begin()); }
+_deque.h (stlport\stl\debug):  iterator end() { return iterator(&_M_iter_list, _M_non_dbg_impl.end()); }
+_deque.h (stlport\stl\debug):  iterator insert(iterator __pos, const value_type& __x = _Tp()) {
+_deque.h (stlport\stl\debug):  iterator insert(iterator __pos, const value_type& __x) {
+_deque.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.insert(__pos._M_iterator, __x));
+_deque.h (stlport\stl\debug):  iterator insert(iterator __pos) {
+_deque.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.insert(__pos._M_iterator));
+_deque.h (stlport\stl\debug):  void insert(iterator __pos, size_type __n, const value_type& __x) {
+_deque.h (stlport\stl\debug):  void insert(iterator __pos, _InputIterator __first, _InputIterator __last) {
+_deque.h (stlport\stl\debug):  void insert(iterator __pos,
+_deque.h (stlport\stl\debug):  void insert(iterator __pos,
+_deque.h (stlport\stl\debug):  void insert(iterator __pos,
+_deque.h (stlport\stl\debug):              iterator __first, iterator __last) {
+_deque.h (stlport\stl\debug):  iterator erase(iterator __pos) {
+_deque.h (stlport\stl\debug):    return iterator (&_M_iter_list, _M_non_dbg_impl.erase(__pos._M_iterator));
+_deque.h (stlport\stl\debug):  iterator erase(iterator __first, iterator __last) {
+_deque.h (stlport\stl\debug):    return iterator (&_M_iter_list, _M_non_dbg_impl.erase(__first._M_iterator, __last._M_iterator));
+_deque.h (stlport\stl\pointers):  typedef _Deque_iterator<_ValueT, _Nonconst_traits<_ValueT> > iterator;
+_deque.h (stlport\stl\pointers):  static iterator to_value_type_ite (storage_iterator const& __ite) {
+_deque.h (stlport\stl\pointers):    iterator tmp;
+_deque.h (stlport\stl\pointers):  static storage_iterator to_storage_type_ite (iterator const& __ite) {
+_deque.h (stlport\stl\pointers):  iterator begin() { return ite_cast_traits::to_value_type_ite(_M_impl.begin()); }
+_deque.h (stlport\stl\pointers):  iterator end()   { return ite_cast_traits::to_value_type_ite(_M_impl.end()); }
+_deque.h (stlport\stl\pointers):  iterator insert(iterator __pos, const value_type& __x = _STLP_DEFAULT_CONSTRUCTED(value_type))
+_deque.h (stlport\stl\pointers):  iterator insert(iterator __pos, const value_type& __x)
+_deque.h (stlport\stl\pointers):  iterator insert(iterator __pos) { return insert(__pos, _STLP_DEFAULT_CONSTRUCTED(value_type)); }
+_deque.h (stlport\stl\pointers):  void insert(iterator __pos, size_type __n, const value_type& __x)
+_deque.h (stlport\stl\pointers):  void _M_insert_dispatch(iterator __pos, _Integer __n, _Integer __val,
+_deque.h (stlport\stl\pointers):  void _M_insert_dispatch(iterator __pos,
+_deque.h (stlport\stl\pointers):  void insert(iterator __pos, _InputIterator __first, _InputIterator __last) {
+_deque.h (stlport\stl\pointers):  void insert(iterator __pos,
+_deque.h (stlport\stl\pointers):  void insert(iterator __pos,
+_deque.h (stlport\stl\pointers):  iterator erase(iterator __pos)
+_deque.h (stlport\stl\pointers):  iterator erase(iterator __first, iterator __last)
+Deque_test.cpp (test\unit):  deque<int>::iterator dit = d.begin();
+Deque_test.cpp (test\unit):  deque<int>::iterator dit;
+Deque_test.cpp (test\unit):  deque<int>::iterator it(dint.begin() + 1);
+Dll_main.cpp (src):  set<int>::iterator iter;
+Equal_test.cpp (test\unit):  vector<Test>::iterator it;
+Equal_test.cpp (test\unit):  pair<vector<Test>::iterator, vector<Test>::iterator> p;
+Features.h (stlport\stl\config):   typedef typename _STLP_STD :: reverse_iterator<iterator> reverse_iterator
+Features.h (stlport\stl\config):   typedef _STLP_STD:: _STLP_TEMPLATE reverse_iterator<iterator> reverse_iterator
+Features.h (stlport\stl\config):   typedef _STLP_STD::reverse_iterator<iterator> reverse_iterator
+Features.h (stlport\stl\config):  typedef _STLP_STD::__reverse_iterator<iterator, value_type, reference, pointer, difference_type> \
+Features.h (stlport\stl\config):  typedef _STLP_STD::__reverse_iterator<iterator, value_type, \
+Features.h (stlport\stl\config):    typedef typename _Super::iterator iterator;                          \
+_hashtable.c (stlport\stl):#  define __iterator__        _STLP_TYPENAME_ON_RETURN_TYPE hashtable<_Val, _Key, _HF, _Traits, _ExK, _EqK, _All>::iterator
+_hashtable.c (stlport\stl):  return iterator(_ElemsIte(_M_buckets[__n]));
+_hashtable.c (stlport\stl):        return pair<iterator, bool>(iterator(__cur), false);
+_hashtable.c (stlport\stl):    return pair<iterator, bool>(iterator(__cur), true);
+_hashtable.c (stlport\stl):  return pair<iterator, bool>(_M_insert_noresize(__n, __obj), true);
+_hashtable.h (stlport\stl):  typedef _Ht_iterator<_BaseIte, _NonConstTraits> iterator;
+_hashtable.h (stlport\stl):  _Ht_iterator(const iterator& __it) : _M_ite(__it._M_ite) {}
+_hashtable.h (stlport\stl):  typedef _STLP_PRIV _Ht_iterator<_ElemsIte, _NonConstTraits> iterator;
+_hashtable.h (stlport\stl):  typedef iterator       local_iterator;
+_hashtable.h (stlport\stl):  iterator begin() { return _M_elems.begin(); }
+_hashtable.h (stlport\stl):  iterator end() { return _M_elems.end(); }
+_hashtable.h (stlport\stl):  pair<iterator, bool> insert_unique(const value_type& __obj) {
+_hashtable.h (stlport\stl):  iterator insert_equal(const value_type& __obj) {
+_hashtable.h (stlport\stl):  iterator _M_insert_noresize(size_type __n, const value_type& __obj);
+_hashtable.h (stlport\stl):  pair<iterator, bool> insert_unique_noresize(const value_type& __obj);
+_hashtable.h (stlport\stl):  iterator insert_equal_noresize(const value_type& __obj);
+_hashtable.h (stlport\stl):  iterator find(const _KT& __key) { return _M_find(__key); }
+_hashtable.h (stlport\stl):  pair<iterator, iterator> equal_range(const _KT& __key) {
+_hashtable.h (stlport\stl):    typedef pair<iterator, iterator> _Pii;
+_hashtable.h (stlport\stl):  iterator _M_before_begin(size_type &__n) const;
+_hashtable.h (stlport\stl):  static iterator _S_before_begin(const _ElemsCont& __elems, const _BucketVector& __buckets,
+_hash_map.h (stlport\stl):  typedef typename _Ht::iterator iterator;
+_hash_map.h (stlport\stl):  iterator begin() { return _M_ht.begin(); }
+_hash_map.h (stlport\stl):  iterator end() { return _M_ht.end(); }
+_hash_map.h (stlport\stl):  pair<iterator,bool> insert(const value_type& __obj)
+_hash_map.h (stlport\stl):  pair<iterator,bool> insert_noresize(const value_type& __obj)
+_hash_map.h (stlport\stl):  iterator find(const _KT& __key) { return _M_ht.find(__key); }
+_hash_map.h (stlport\stl):    iterator __it = _M_ht.find(__key);
+_hash_map.h (stlport\stl):  pair<iterator, iterator> equal_range(const _KT& __key)
+_hash_map.h (stlport\stl):  void erase(iterator __it) { _M_ht.erase(__it); }
+_hash_map.h (stlport\stl):  void erase(iterator __f, iterator __l) { _M_ht.erase(__f, __l); }
+_hash_map.h (stlport\stl):  typedef typename _Ht::iterator iterator;
+_hash_map.h (stlport\stl):  iterator begin() { return _M_ht.begin(); }
+_hash_map.h (stlport\stl):  iterator end() { return _M_ht.end(); }
+_hash_map.h (stlport\stl):  iterator insert(const value_type& __obj)
+_hash_map.h (stlport\stl):  iterator insert_noresize(const value_type& __obj)
+_hash_map.h (stlport\stl):  iterator find(const _KT& __key) { return _M_ht.find(__key); }
+_hash_map.h (stlport\stl):  pair<iterator, iterator>
+_hash_map.h (stlport\stl):  void erase(iterator __it) { _M_ht.erase(__it); }
+_hash_map.h (stlport\stl):  void erase(iterator __f, iterator __l) { _M_ht.erase(__f, __l); }
+_hash_set.h (stlport\stl):  typedef typename _Ht::iterator iterator;
+_hash_set.h (stlport\stl):  iterator begin() { return _M_ht.begin(); }
+_hash_set.h (stlport\stl):  iterator end() { return _M_ht.end(); }
+_hash_set.h (stlport\stl):  pair<iterator, bool> insert(const value_type& __obj)
+_hash_set.h (stlport\stl):  pair<iterator, bool> insert_noresize(const value_type& __obj)
+_hash_set.h (stlport\stl):  iterator find(const _KT& __key) { return _M_ht.find(__key); }
+_hash_set.h (stlport\stl):  pair<iterator, iterator> equal_range(const _KT& __key)
+_hash_set.h (stlport\stl):  void erase(iterator __it) { _M_ht.erase(__it); }
+_hash_set.h (stlport\stl):  void erase(iterator __f, iterator __l) { _M_ht.erase(__f, __l); }
+_hash_set.h (stlport\stl):  typedef typename _Ht::iterator iterator;
+_hash_set.h (stlport\stl):  iterator begin() { return _M_ht.begin(); }
+_hash_set.h (stlport\stl):  iterator end() { return _M_ht.end(); }
+_hash_set.h (stlport\stl):  iterator insert(const value_type& __obj) { return _M_ht.insert_equal(__obj); }
+_hash_set.h (stlport\stl):  iterator insert_noresize(const value_type& __obj)
+_hash_set.h (stlport\stl):  iterator find(const _KT& __key) { return _M_ht.find(__key); }
+_hash_set.h (stlport\stl):  pair<iterator, iterator> equal_range(const _KT& __key)
+_hash_set.h (stlport\stl):  void erase(iterator __it) { _M_ht.erase(__it); }
+_hash_set.h (stlport\stl):  void erase(iterator __f, iterator __l) { _M_ht.erase(__f, __l); }
+Hash_test.cpp (test\unit):  pair<hash_set<int, hash<int>, equal_to<int> >::iterator, bool> p = s.insert(42);
+Hash_test.cpp (test\unit):  typedef hash_set<IncompleteClass>::iterator hsit;
+Hash_test.cpp (test\unit):  typedef hash_multiset<IncompleteClass>::iterator hsmit;
+Hash_test.cpp (test\unit):  typedef hash_map<IncompleteClass, IncompleteClass>::iterator hmit;
+Hash_test.cpp (test\unit):  typedef hash_multimap<IncompleteClass, IncompleteClass>::iterator hmmit;
+Insert_test.cpp (test\unit):  deque<char const*>::iterator i = names.begin() + 2;
+Insert_test.cpp (test\unit):  deque<char const*>::iterator i = names.begin() + 2;
+Ioiter_test.cpp (test\unit):#include <iterator>
+Istmit_test.cpp (test\unit):#  include <iterator>
+_istreambuf_iterator.h (stlport\stl):  public iterator<input_iterator_tag, _CharT, typename _Traits::off_type, _CharT*, _CharT&>
+Iterator (stlport):#    include_next <iterator>
+Iterator (stlport):#    include _STLP_NATIVE_HEADER(iterator)
+_iterator.h (stlport\stl):  : public iterator<output_iterator_tag, void, void, void, void> {
+_iterator.h (stlport\stl):  : public iterator<output_iterator_tag, void, void, void, void> {
+_iterator.h (stlport\stl):  : public iterator<output_iterator_tag, void, void, void, void> {
+_iterator_base.h (stlport\stl):struct iterator {
+_iterator_base.h (stlport\stl):struct iterator<output_iterator_tag, void, void, void, void> {
+_iterator_base.h (stlport\stl):#    include_next <iterator>
+_iterator_base.h (stlport\stl):#    include _STLP_NATIVE_HEADER(iterator)
+_iterator_base.h (stlport\stl):  public iterator <input_iterator_tag, _Tp, _Distance, _Tp*, _Tp&> {};
+_iterator_base.h (stlport\stl):struct output_iterator : public iterator <output_iterator_tag, void, void, void, void> {};
+_iterator_base.h (stlport\stl):  public iterator<forward_iterator_tag, _Tp, _Distance, _Tp*, _Tp&> {};
+_iterator_base.h (stlport\stl):  public iterator<bidirectional_iterator_tag, _Tp, _Distance, _Tp*, _Tp&> {};
+_iterator_base.h (stlport\stl):  public iterator<random_access_iterator_tag, _Tp, _Distance, _Tp*, _Tp&> {};
+Iterator_header_test.cpp (test\unit):#include <iterator>
+Iter_test.cpp (test\unit):  vector<int>::iterator i = v.end();
+Iter_test.cpp (test\unit):  vector<bool>::iterator i1 = boolVector.begin();
+Iter_test.cpp (test\unit):  vector<bool>::iterator i2 = boolVector.begin();
+LeakCheck.h (test\eh):#include <iterator>
+_list.c (stlport\stl):  iterator __i = begin();
+_list.c (stlport\stl):    iterator __first1 = begin();
+_list.c (stlport\stl):    iterator __last1 = end();
+_list.c (stlport\stl):  iterator __i = begin();
+_list.c (stlport\stl):  typedef typename list<_Tp, _Alloc>::iterator _Literator;
+_list.c (stlport\stl):  typedef typename list<_Tp, _Alloc>::iterator _Literator;
+_list.c (stlport\stl):  typedef typename list<_Tp, _Alloc>::iterator _Literator;
+_list.h (stlport\stl):  iterator begin()                      { return iterator(this->_M_node._M_data._M_next); }
+_list.h (stlport\stl):  iterator end()                        { return iterator(&this->_M_node._M_data); }
+_list.h (stlport\stl):  iterator insert(iterator __pos, const_reference __x = value_type())
+_list.h (stlport\stl):  iterator insert(iterator __pos, const_reference __x)
+_list.h (stlport\stl):    return iterator(__tmp);
+_list.h (stlport\stl):  void _M_insert(iterator __pos, _InputIterator __first, _InputIterator __last) {
+_list.h (stlport\stl):  void _M_insert_dispatch(iterator __pos, _Integer __n, _Integer __x,
+_list.h (stlport\stl):  void _M_insert_dispatch(iterator __pos,
+_list.h (stlport\stl):  void _M_insert(iterator __pos, const value_type* __first, const value_type* __last) {
+_list.h (stlport\stl):  void _M_insert(iterator __pos, const_iterator __first, const_iterator __last) {
+_list.h (stlport\stl):  void insert(iterator __pos, _InputIterator __first, _InputIterator __last) {
+_list.h (stlport\stl):  void _M_splice_insert_dispatch(iterator __pos, _Integer __n, _Integer __x,
+_list.h (stlport\stl):  void _M_splice_insert_dispatch(iterator __pos,
+_list.h (stlport\stl):  void insert(iterator __pos, const value_type* __first, const value_type* __last) {
+_list.h (stlport\stl):  void insert(iterator __pos, const_iterator __first, const_iterator __last) {
+_list.h (stlport\stl):  void insert(iterator __pos, size_type __n, const_reference __x)
+_list.h (stlport\stl):  void _M_fill_insert(iterator __pos, size_type __n, const_reference __x) {
+_list.h (stlport\stl):  iterator insert(iterator __pos)
+_list.h (stlport\stl):  iterator erase(iterator __pos) {
+_list.h (stlport\stl):    return iterator(__next_node);
+_list.h (stlport\stl):  iterator erase(iterator __first, iterator __last) {
+_list.h (stlport\stl):    iterator __tmp = end();
+_list.h (stlport\stl):    iterator __first1 = begin();
+_list.h (stlport\stl):    iterator __last1 = end();
+_list.h (stlport\stl):    iterator __first1 = begin();
+_list.h (stlport\stl):    iterator __last1 = end();
+_list.h (stlport\stl):  void splice(iterator __pos, _Self& __x) {
+_list.h (stlport\stl):  void splice(iterator __pos, _Self& __x, iterator __i) {
+_list.h (stlport\stl):    iterator __j = __i;
+_list.h (stlport\stl):  void splice(iterator __pos, _Self& __x, iterator __first, iterator __last) {
+_list.h (stlport\stl):    iterator __first = begin();
+_list.h (stlport\stl):    iterator __last = end();
+_list.h (stlport\stl):      iterator __next = __first;
+_list.h (stlport\stl\debug):  typedef _STLP_PRIV _DBG_iter<_Base, _STLP_PRIV _DbgTraits<_Nonconst_traits<value_type> > > iterator;
+_list.h (stlport\stl\debug):  void _Invalidate_iterator(const iterator& __it)
+_list.h (stlport\stl\debug):  void _Invalidate_iterators(const iterator& __first, const iterator& __last)
+_list.h (stlport\stl\debug):  iterator begin()             { return iterator(&_M_iter_list, _M_non_dbg_impl.begin()); }
+_list.h (stlport\stl\debug):  iterator end()               { return iterator(&_M_iter_list, _M_non_dbg_impl.end()); }
+_list.h (stlport\stl\debug):  iterator insert(iterator __pos, const _Tp& __x = _Tp()) {
+_list.h (stlport\stl\debug):  iterator insert(iterator __pos, const _Tp& __x) {
+_list.h (stlport\stl\debug):  iterator insert(iterator __pos) { return insert(__pos, _STLP_DEFAULT_CONSTRUCTED(_Tp)); }
+_list.h (stlport\stl\debug):  void insert(iterator __pos, _InputIterator __first, _InputIterator __last) {
+_list.h (stlport\stl\debug):  void insert(iterator __pos, const _Tp* __first, const _Tp* __last) {
+_list.h (stlport\stl\debug):  void insert(iterator __pos,
+_list.h (stlport\stl\debug):  void insert(iterator __pos,
+_list.h (stlport\stl\debug):              iterator __first, iterator __last) {
+_list.h (stlport\stl\debug):  void insert(iterator __pos, size_type __n, const _Tp& __x) {
+_list.h (stlport\stl\debug):  iterator erase(iterator __pos) {
+_list.h (stlport\stl\debug):    return iterator(&_M_iter_list,_M_non_dbg_impl.erase(__pos._M_iterator));
+_list.h (stlport\stl\debug):  iterator erase(iterator __first, iterator __last) {
+_list.h (stlport\stl\debug):    return iterator (&_M_iter_list, _M_non_dbg_impl.erase(__first._M_iterator, __last._M_iterator));
+_list.h (stlport\stl\debug):      erase(iterator(&_M_iter_list, __i), end());
+_list.h (stlport\stl\debug):  void assign(iterator __first, iterator __last) {
+_list.h (stlport\stl\debug):        _Invalidate_iterator(iterator(&_M_iter_list, __first));
+_list.h (stlport\stl\debug):  void splice(iterator __pos, _Self& __x) {
+_list.h (stlport\stl\debug):  void splice(iterator __pos, _Self& __x, iterator __i) {
+_list.h (stlport\stl\debug):  void splice(iterator __pos, _Self& __x, iterator __first, iterator __last) {
+_list.h (stlport\stl\debug):        _Invalidate_iterator(iterator(&_M_iter_list, __next));
+_list.h (stlport\stl\debug):        _Invalidate_iterator(iterator(&_M_iter_list, __first));
+_list.h (stlport\stl\debug):        _Invalidate_iterator(iterator(&_M_iter_list, __next));
+_list.h (stlport\stl\pointers):  typedef _STLP_PRIV _List_iterator<value_type, _Nonconst_traits<value_type> > iterator;
+_list.h (stlport\stl\pointers):  iterator begin()             { return iterator(_M_impl.begin()._M_node); }
+_list.h (stlport\stl\pointers):  iterator end()               { return iterator(_M_impl.end()._M_node); }
+_list.h (stlport\stl\pointers):  iterator insert(iterator __pos, const_reference __x = _STLP_DEFAULT_CONSTRUCTED(value_type))
+_list.h (stlport\stl\pointers):  iterator insert(iterator __pos, const_reference __x)
+_list.h (stlport\stl\pointers):  { return iterator(_M_impl.insert(_BaseIte(__pos._M_node),
+_list.h (stlport\stl\pointers):  void _M_insert_dispatch(iterator __pos, _Integer __n, _Integer __val,
+_list.h (stlport\stl\pointers):  void _M_insert_dispatch(iterator __pos,
+_list.h (stlport\stl\pointers):  void insert(iterator __pos, _InputIterator __first, _InputIterator __last) {
+_list.h (stlport\stl\pointers):  void insert(iterator __pos, const value_type *__first, const value_type *__last)
+_list.h (stlport\stl\pointers):  void insert(iterator __pos, const_iterator __first, const_iterator __last)
+_list.h (stlport\stl\pointers):  void insert(iterator __pos, size_type __n, const value_type& __x)
+_list.h (stlport\stl\pointers):  iterator insert(iterator __pos) { return iterator(_M_impl.insert(__pos._M_node)._M_node); }
+_list.h (stlport\stl\pointers):  iterator erase(iterator __pos)
+_list.h (stlport\stl\pointers):  { return iterator(_M_impl.erase(_BaseIte(__pos._M_node))._M_node); }
+_list.h (stlport\stl\pointers):  iterator erase(iterator __first, iterator __last)
+_list.h (stlport\stl\pointers):  { return iterator(_M_impl.erase(_BaseIte(__first._M_node), _BaseIte(__last._M_node))._M_node); }
+_list.h (stlport\stl\pointers):  void splice(iterator __pos, _Self& __x)
+_list.h (stlport\stl\pointers):  void splice(iterator __pos, _Self& __x, iterator __i)
+_list.h (stlport\stl\pointers):  void splice(iterator __pos, _Self& __x, iterator __first, iterator __last)
+List_test.cpp (test\unit):  list<int>::iterator i1 = l1.begin();
+List_test.cpp (test\unit):  list<int>::iterator i2 = l2.begin();
+List_test.cpp (test\unit):  list<int>::iterator i = l1.begin();
+List_test.cpp (test\unit):  list<char>::iterator i;
+List_test.cpp (test\unit):  list<int>::iterator i = l1.begin();
+List_test.cpp (test\unit):  list<int>::iterator lit;
+List_test.cpp (test\unit):    list<int>::iterator lit(l.begin());
+List_test.cpp (test\unit):    list<int>::iterator lit(l.begin());
+List_test.cpp (test\unit):  list<int>::iterator i = l.begin();
+List_test.cpp (test\unit):  typedef list<IncompleteClass>::iterator it;
+_map.h (stlport\stl):  typedef typename _Rep_type::iterator iterator;
+_map.h (stlport\stl):  iterator begin() { return _M_t.begin(); }
+_map.h (stlport\stl):  iterator end() { return _M_t.end(); }
+_map.h (stlport\stl):    iterator __i = lower_bound(__k);
+_map.h (stlport\stl):  pair<iterator,bool> insert(const value_type& __x)
+_map.h (stlport\stl):  iterator insert(iterator __pos, const value_type& __x)
+_map.h (stlport\stl):  void erase(iterator __pos) { _M_t.erase(__pos); }
+_map.h (stlport\stl):  void erase(iterator __first, iterator __last) { _M_t.erase(__first, __last); }
+_map.h (stlport\stl):  iterator find(const _KT& __x) { return _M_t.find(__x); }
+_map.h (stlport\stl):  iterator lower_bound(const _KT& __x) { return _M_t.lower_bound(__x); }
+_map.h (stlport\stl):  iterator upper_bound(const _KT& __x) { return _M_t.upper_bound(__x); }
+_map.h (stlport\stl):  pair<iterator,iterator> equal_range(const _KT& __x)
+_map.h (stlport\stl):  typedef typename _Rep_type::iterator iterator;
+_map.h (stlport\stl):  iterator begin() { return _M_t.begin(); }
+_map.h (stlport\stl):  iterator end() { return _M_t.end(); }
+_map.h (stlport\stl):  iterator insert(const value_type& __x) { return _M_t.insert_equal(__x); }
+_map.h (stlport\stl):  iterator insert(iterator __pos, const value_type& __x) { return _M_t.insert_equal(__pos, __x); }
+_map.h (stlport\stl):  void erase(iterator __pos) { _M_t.erase(__pos); }
+_map.h (stlport\stl):  void erase(iterator __first, iterator __last) { _M_t.erase(__first, __last); }
+_map.h (stlport\stl):  iterator find(const _KT& __x) { return _M_t.find(__x); }
+_map.h (stlport\stl):  iterator lower_bound(const _KT& __x) { return _M_t.lower_bound(__x); }
+_map.h (stlport\stl):  iterator upper_bound(const _KT& __x) { return _M_t.upper_bound(__x); }
+_map.h (stlport\stl):  pair<iterator,iterator> equal_range(const _KT& __x)
+Map_test.cpp (test\unit):  typedef map<IncompleteClass, IncompleteClass>::iterator it;
+Map_test.cpp (test\unit):  typedef multimap<IncompleteClass, IncompleteClass>::iterator mit;
+Mfunptr_test.cpp (test\unit):  vector<V>::iterator i = find_if( v.begin(), v.end(), b );
+Mfunptr_test.cpp (test\unit):  vector<V>::iterator j = find_if( v.begin(), v.end(), b3 );
+Mfunptr_test.cpp (test\unit):  vector<V>::iterator k = find_if( v.begin(), v.end(), bind2nd( mem_fun_ref( &V::f ), 2 ) );
+Mvctor_test.cpp (test\unit):    deque<vector<int> >::iterator vdit(vect_deque.begin()), vditEnd(vect_deque.end());
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator it = vect_deque.end() - 5;
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator dit(vect_deque.begin()), ditEnd(vect_deque.end());
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator it = vect_deque.end() - 5;
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator dit(vect_deque.begin()), ditEnd(vect_deque.end());
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator it = vect_deque.end() - 5;
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator dit(vect_deque.begin()), ditEnd(vect_deque.end());
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator it = vect_deque.end() - 5;
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator dit(vect_deque.begin()), ditEnd(vect_deque.end());
+Mvctor_test.cpp (test\unit):    deque<vector<int> >::iterator vdit(vect_deque.begin()), vditEnd(vect_deque.end());
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator dit(vect_deque.begin()), ditEnd(vect_deque.end());
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator dit(vect_deque.begin()), ditEnd(vect_deque.end());
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator ret;
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator dit(vect_deque.begin()), ditEnd(vect_deque.end());
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator ret;
+Mvctor_test.cpp (test\unit):      deque<vector<int> >::iterator dit(vect_deque.begin()), ditEnd(vect_deque.end());
+Mvctor_test.cpp (test\unit):    vector<vector<int> >::iterator vdit(vect_vector.begin()), vditEnd(vect_vector.end());
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator it = vect_vector.end() - 5;
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator dit(vect_vector.begin()), ditEnd(vect_vector.end());
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator it = vect_vector.end() - 5;
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator dit(vect_vector.begin()), ditEnd(vect_vector.end());
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator it = vect_vector.end() - 5;
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator dit(vect_vector.begin()), ditEnd(vect_vector.end());
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator it = vect_vector.end() - 5;
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator dit(vect_vector.begin()), ditEnd(vect_vector.end());
+Mvctor_test.cpp (test\unit):    vector<vector<int> >::iterator vdit(vect_vector.begin()), vditEnd(vect_vector.end());
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator dit(vect_vector.begin()), ditEnd(vect_vector.end());
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator dit(vect_vector.begin()), ditEnd(vect_vector.end());
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator ret =
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator dit(vect_vector.begin()), ditEnd(vect_vector.end());
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator ret =
+Mvctor_test.cpp (test\unit):      vector<vector<int> >::iterator dit(vect_vector.begin()), ditEnd(vect_vector.end());
+Mvctor_test.cpp (test\unit):      vector<vector<string> >::iterator it(vect.begin());
+Mvctor_test.cpp (test\unit):    vector<string>::iterator it(strs.begin()), itEnd(strs.end());
+Mvctor_test.cpp (test\unit):      vector<deque<string> >::iterator it(vect.begin());
+Mvctor_test.cpp (test\unit):    vector<string>::iterator it(strs.begin()), itEnd(strs.end());
+Mvctor_test.cpp (test\unit):      vector<list<string> >::iterator it(vect.begin());
+Mvctor_test.cpp (test\unit):    vector<string>::iterator it(strs.begin()), itEnd(strs.end());
+Mvctor_test.cpp (test\unit):      vector<slist<string> >::iterator it(vect.begin());
+Mvctor_test.cpp (test\unit):    vector<string>::iterator it(strs.begin()), itEnd(strs.end());
+Mvctor_test.cpp (test\unit):      vector<multiset<string> >::iterator it(vect.begin());
+Mvctor_test.cpp (test\unit):    vector<string>::iterator it(strs.begin()), itEnd(strs.end());
+Mvctor_test.cpp (test\unit):      vector<unordered_multiset<string> >::iterator it(vect.begin());
+Mvctor_test.cpp (test\unit):    vector<string>::iterator it(strs.begin()), itEnd(strs.end());
+Ostmit_test.cpp (test\unit):#include <iterator>
+_ostreambuf_iterator.h (stlport\stl):  public iterator<output_iterator_tag, void, void, void, void> {
+Partition_test.cpp (test\unit):#include <iterator>
+Perm_test.cpp (test\unit):#include <iterator>
+Ptrspec_test.cpp (test\unit):#include <iterator>
+Rawriter_test.cpp (test\unit):#include <iterator>
+_raw_storage_iter.h (stlport\stl):      : public iterator<output_iterator_tag,void,void,void,void>
+ReleaseNote.txt (etc):	be able to use some of the nested types like iterator even if type used to
+ReleaseNote.txt (etc):	* New checks in safe STL mode like null pointer or check of iterator range
+_rope.h (stlport\stl):class sequence_buffer : public iterator <output_iterator_tag, void, void, void, void> {
+_rope.h (stlport\stl):  typedef _Rope_iterator<_CharT,_Alloc> iterator;
+_rope.h (stlport\stl):  rope(const iterator& __s, const iterator& __e,
+_rope.h (stlport\stl):  void insert(size_t __p, const iterator& __i,
+_rope.h (stlport\stl):                          const iterator& __j) {
+_rope.h (stlport\stl):               const iterator& __i, const iterator& __j) {
+_rope.h (stlport\stl):    iterator __i(this, __p);
+_rope.h (stlport\stl):  void replace(size_t __p, const iterator& __i,
+_rope.h (stlport\stl):                           const iterator& __j) {
+_rope.h (stlport\stl):  iterator insert(const iterator& __p, const _Self& __r)
+_rope.h (stlport\stl):  iterator insert(const iterator& __p, size_t __n, _CharT __c)
+_rope.h (stlport\stl):  iterator insert(const iterator& __p, _CharT __c)
+_rope.h (stlport\stl):  iterator insert(const iterator& __p )
+_rope.h (stlport\stl):  iterator insert(const iterator& __p, const _CharT* c_string)
+_rope.h (stlport\stl):  iterator insert(const iterator& __p, const _CharT* __i, size_t __n)
+_rope.h (stlport\stl):  iterator insert(const iterator& __p, const _CharT* __i,
+_rope.h (stlport\stl):  iterator insert(const iterator& __p,
+_rope.h (stlport\stl):  iterator insert(const iterator& __p,
+_rope.h (stlport\stl):                  const iterator& __i, const iterator& __j)
+_rope.h (stlport\stl):  void replace(const iterator& __p, const iterator& __q,
+_rope.h (stlport\stl):  void replace(const iterator& __p, const iterator& __q, _CharT __c)
+_rope.h (stlport\stl):  void replace(const iterator& __p, const iterator& __q,
+_rope.h (stlport\stl):  void replace(const iterator& __p, const iterator& __q,
+_rope.h (stlport\stl):  void replace(const iterator& __p, const iterator& __q,
+_rope.h (stlport\stl):  void replace(const iterator& __p, const iterator& __q,
+_rope.h (stlport\stl):  void replace(const iterator& __p, const iterator& __q,
+_rope.h (stlport\stl):               const iterator& __i, const iterator& __j)
+_rope.h (stlport\stl):  void replace(const iterator& __p, const _Self& __r)
+_rope.h (stlport\stl):  void replace(const iterator& __p, _CharT __c)
+_rope.h (stlport\stl):  void replace(const iterator& __p, const _CharT* __c_string)
+_rope.h (stlport\stl):  void replace(const iterator& __p, const _CharT* __i, size_t __n)
+_rope.h (stlport\stl):  void replace(const iterator& __p, const _CharT* __i, const _CharT* __j)
+_rope.h (stlport\stl):  void replace(const iterator& __p, const_iterator __i,
+_rope.h (stlport\stl):  void replace(const iterator& __p, iterator __i, iterator __j)
+_rope.h (stlport\stl):  iterator erase(const iterator& __p, const iterator& __q) {
+_rope.h (stlport\stl):    return iterator(this, __p_index);
+_rope.h (stlport\stl):  iterator erase(const iterator& __p) {
+_rope.h (stlport\stl):    return iterator(this, __p_index);
+_rope.h (stlport\stl):  _Self substr(iterator __start, iterator __end) const {
+_rope.h (stlport\stl):  _Self substr(iterator __start) const {
+_rope.h (stlport\stl):  iterator mutable_begin() {
+_rope.h (stlport\stl):    return(iterator(this, 0));
+_rope.h (stlport\stl):  iterator mutable_end() {
+_rope.h (stlport\stl):    return(iterator(this, size()));
+_rope.h (stlport\stl):  iterator end() { return mutable_end(); }
+_rope.h (stlport\stl):  iterator begin() { return mutable_begin(); }
+_set.h (stlport\stl):  typedef typename _Rep_type::iterator iterator;
+_set.h (stlport\stl):  iterator begin() { return _M_t.begin(); }
+_set.h (stlport\stl):  iterator end() { return _M_t.end(); }
+_set.h (stlport\stl):  pair<iterator,bool> insert(const value_type& __x)
+_set.h (stlport\stl):  iterator insert(iterator __pos, const value_type& __x)
+_set.h (stlport\stl):  void erase(iterator __pos) { _M_t.erase( __pos ); }
+_set.h (stlport\stl):  void erase(iterator __first, iterator __last) { _M_t.erase(__first, __last ); }
+_set.h (stlport\stl):  iterator find(const _KT& __x) { return _M_t.find(__x); }
+_set.h (stlport\stl):  iterator lower_bound(const _KT& __x) { return _M_t.lower_bound(__x); }
+_set.h (stlport\stl):  iterator upper_bound(const _KT& __x) { return _M_t.upper_bound(__x); }
+_set.h (stlport\stl):  pair<iterator, iterator> equal_range(const _KT& __x)
+_set.h (stlport\stl):  typedef typename _Rep_type::iterator iterator;
+_set.h (stlport\stl):  iterator begin() { return _M_t.begin(); }
+_set.h (stlport\stl):  iterator end() { return _M_t.end(); }
+_set.h (stlport\stl):  iterator insert(const value_type& __x)
+_set.h (stlport\stl):  iterator insert(iterator __pos, const value_type& __x)
+_set.h (stlport\stl):  void erase(iterator __pos) { _M_t.erase( __pos ); }
+_set.h (stlport\stl):  void erase(iterator __first, iterator __last) { _M_t.erase( __first, __last ); }
+_set.h (stlport\stl):  iterator find(const _KT& __x) { return _M_t.find(__x); }
+_set.h (stlport\stl):  iterator lower_bound(const _KT& __x) { return _M_t.lower_bound(__x); }
+_set.h (stlport\stl):  iterator upper_bound(const _KT& __x) { return _M_t.upper_bound(__x); }
+_set.h (stlport\stl):  pair<iterator, iterator> equal_range(const _KT& __x) { return _M_t.equal_range(__x); }
+_set.h (stlport\stl\pointers):  typedef typename _Priv_Rep_type::iterator iterator;
+_set.h (stlport\stl\pointers):  static iterator _S_to_value_ite(const_base_iterator __ite)
+_set.h (stlport\stl\pointers):  { return iterator(__ite._Owner(), __ite._M_iterator._M_node); }
+_set.h (stlport\stl\pointers):  static iterator _S_to_value_ite(const_base_iterator __ite)
+_set.h (stlport\stl\pointers):  { return iterator(__ite._M_node); }
+_set.h (stlport\stl\pointers):  iterator begin() { return _S_to_value_ite(_M_t.begin()); }
+_set.h (stlport\stl\pointers):  iterator end() { return _S_to_value_ite(_M_t.end()); }
+_set.h (stlport\stl\pointers):  pair<iterator,bool> insert(const value_type& __x) {
+_set.h (stlport\stl\pointers):    return pair<iterator, bool>(_S_to_value_ite(ret.first), ret.second);
+_set.h (stlport\stl\pointers):  iterator insert(iterator __pos, const value_type& __x)
+_set.h (stlport\stl\pointers):  void erase(iterator __pos)
+_set.h (stlport\stl\pointers):  void erase(iterator __first, iterator __last)
+_set.h (stlport\stl\pointers):  iterator find(const _KT& __x)
+_set.h (stlport\stl\pointers):  iterator lower_bound(const _KT& __x)
+_set.h (stlport\stl\pointers):  iterator upper_bound(const _KT& __x)
+_set.h (stlport\stl\pointers):  pair<iterator, iterator> equal_range(const _KT& __x) {
+_set.h (stlport\stl\pointers):    return pair<iterator, iterator>(_S_to_value_ite(__ret.first),
+_set.h (stlport\stl\pointers):  typedef typename _Priv_Rep_type::iterator iterator;
+_set.h (stlport\stl\pointers):  static iterator _S_to_value_ite(const_base_iterator __ite)
+_set.h (stlport\stl\pointers):  { return iterator(__ite._Owner(), __ite._M_iterator._M_node); }
+_set.h (stlport\stl\pointers):  static iterator _S_to_value_ite(const_base_iterator __ite)
+_set.h (stlport\stl\pointers):  { return iterator(__ite._M_node); }
+_set.h (stlport\stl\pointers):  iterator begin() { return _S_to_value_ite(_M_t.begin()); }
+_set.h (stlport\stl\pointers):  iterator end() { return _S_to_value_ite(_M_t.end()); }
+_set.h (stlport\stl\pointers):  iterator insert(const value_type& __x)
+_set.h (stlport\stl\pointers):  iterator insert(iterator __pos, const value_type& __x) {
+_set.h (stlport\stl\pointers):  void erase(iterator __pos)
+_set.h (stlport\stl\pointers):  void erase(iterator __first, iterator __last)
+_set.h (stlport\stl\pointers):  iterator find(const _KT& __x)
+_set.h (stlport\stl\pointers):  iterator lower_bound(const _KT& __x)
+_set.h (stlport\stl\pointers):  iterator upper_bound(const _KT& __x)
+_set.h (stlport\stl\pointers):  pair<iterator, iterator> equal_range(const _KT& __x) {
+_set.h (stlport\stl\pointers):    return pair<iterator, iterator>(_S_to_value_ite(__ret.first),
+Setdiff_test.cpp (test\unit):#include <iterator>
+Setinter_test.cpp (test\unit):#include <iterator>
+Setunion_test.cpp (test\unit):#include <iterator>
+Set_test.cpp (test\unit):  set<int>::iterator i = s.insert( s.end(), 0 );
+Set_test.cpp (test\unit):  set<int>::iterator sit;
+Set_test.cpp (test\unit):  pair<set<int>::iterator, set<int>::iterator> pit;
+Set_test.cpp (test\unit):  set<SetTestClass>::iterator sit(s.begin()), sitEnd(s.end());
+Set_test.cpp (test\unit):  set<int>::iterator it = tree.begin();
+Set_test.cpp (test\unit):  typedef set<IncompleteClass>::iterator it;
+Set_test.cpp (test\unit):  typedef multiset<IncompleteClass>::iterator mit;
+_slist.c (stlport\stl):  typename slist<_Tp, _Alloc>::iterator __ite(__that.begin());
+_slist.c (stlport\stl):    typename slist<_Tp, _Alloc>::iterator __ite(__that.before_begin());
+_slist.c (stlport\stl):    typename slist<_Tp, _Alloc>::iterator __i1(__that.before_begin()), __i2(__x.begin());
+_slist.h (stlport\stl):  iterator before_begin() { return iterator(&this->_M_head._M_data); }
+_slist.h (stlport\stl):  iterator begin() { return iterator(this->_M_head._M_data._M_next); }
+_slist.h (stlport\stl):  iterator end() { return iterator(); }
+_slist.h (stlport\stl):  iterator previous(const_iterator __pos) {
+_slist.h (stlport\stl):    return iterator(_STLP_PRIV _Sl_global_inst::__previous(&this->_M_head._M_data, __pos._M_node));
+_slist.h (stlport\stl):    splice_after(iterator(__pos), __tmp);
+_slist.h (stlport\stl):    splice(iterator(__pos), __tmp);
+_slist.h (stlport\stl):  iterator insert_after(iterator __pos, const value_type& __x = _Tp()) {
+_slist.h (stlport\stl):  iterator insert_after(iterator __pos, const value_type& __x) {
+_slist.h (stlport\stl):    return iterator(_M_insert_after(__pos._M_node, __x));
+_slist.h (stlport\stl):  iterator insert_after(iterator __pos) {
+_slist.h (stlport\stl):  void insert_after(iterator __pos, size_type __n, const value_type& __x) {
+_slist.h (stlport\stl):  void insert_after(iterator __pos, _InIter __first, _InIter __last) {
+_slist.h (stlport\stl):  void insert_after(iterator __pos,
+_slist.h (stlport\stl):  void insert_after(iterator __pos,
+_slist.h (stlport\stl):  iterator insert(iterator __pos, const value_type& __x = _Tp()) {
+_slist.h (stlport\stl):  iterator insert(iterator __pos, const value_type& __x) {
+_slist.h (stlport\stl):    return iterator(_M_insert_after(_STLP_PRIV _Sl_global_inst::__previous(&this->_M_head._M_data, __pos._M_node),
+_slist.h (stlport\stl):  iterator insert(iterator __pos) {
+_slist.h (stlport\stl):    return iterator(_M_insert_after(_STLP_PRIV _Sl_global_inst::__previous(&this->_M_head._M_data, __pos._M_node),
+_slist.h (stlport\stl):  void insert(iterator __pos, size_type __n, const value_type& __x) {
+_slist.h (stlport\stl):  void insert(iterator __pos, _InIter __first, _InIter __last) {
+_slist.h (stlport\stl):  void insert(iterator __pos, const value_type* __first,
+_slist.h (stlport\stl):  void insert(iterator __pos, const_iterator __first, const_iterator __last) {
+_slist.h (stlport\stl):  iterator erase_after(iterator __pos)
+_slist.h (stlport\stl):  { return iterator(this->_M_erase_after(__pos._M_node)); }
+_slist.h (stlport\stl):  iterator erase_after(iterator __before_first, iterator __last)
+_slist.h (stlport\stl):  { return iterator(this->_M_erase_after(__before_first._M_node, __last._M_node)); }
+_slist.h (stlport\stl):  iterator erase(iterator __pos)
+_slist.h (stlport\stl):  { return iterator(this->_M_erase_after(_STLP_PRIV _Sl_global_inst::__previous(&this->_M_head._M_data, __pos._M_node))); }
+_slist.h (stlport\stl):  iterator erase(iterator __first, iterator __last)
+_slist.h (stlport\stl):  { return iterator(this->_M_erase_after(_STLP_PRIV _Sl_global_inst::__previous(&this->_M_head._M_data, __first._M_node), __last._M_node)); }
+_slist.h (stlport\stl):  void splice_after(iterator __pos, _Self& __x,
+_slist.h (stlport\stl):                    iterator __before_first, iterator __before_last) {
+_slist.h (stlport\stl):        this->insert_after(__pos, iterator(__before_first._M_node->_M_next), iterator(__before_last._M_node->_M_next));
+_slist.h (stlport\stl):  void splice_after(iterator __pos, _Self& __x, iterator __prev) {
+_slist.h (stlport\stl):  void splice_after(iterator __pos, _Self& __x) {
+_slist.h (stlport\stl):  void splice(iterator __pos, _Self& __x) {
+_slist.h (stlport\stl):  void splice(iterator __pos, _Self& __x, iterator __i) {
+_slist.h (stlport\stl):  void splice(iterator __pos, _Self& __x, iterator __first, iterator __last) {
+_slist.h (stlport\stl\debug):  typedef _STLP_PRIV _DBG_iter<_Base, _STLP_PRIV _SlistDbgTraits<_Nonconst_traits<value_type> > > iterator;
+_slist.h (stlport\stl\debug):  void _Invalidate_iterator(const iterator& __it)
+_slist.h (stlport\stl\debug):  void _Invalidate_iterators(const iterator& __first, const iterator& __last)
+_slist.h (stlport\stl\debug):  iterator before_begin()
+_slist.h (stlport\stl\debug):  { return iterator(&_M_iter_list, _M_non_dbg_impl.before_begin()); }
+_slist.h (stlport\stl\debug):  iterator begin()
+_slist.h (stlport\stl\debug):  { return iterator(&_M_iter_list, _M_non_dbg_impl.begin()); }
+_slist.h (stlport\stl\debug):  iterator end()
+_slist.h (stlport\stl\debug):  { return iterator(&_M_iter_list, _M_non_dbg_impl.end()); }
+_slist.h (stlport\stl\debug):  iterator previous(const_iterator __pos) {
+_slist.h (stlport\stl\debug):  iterator insert_after(iterator __pos, const value_type& __x = _Tp()) {
+_slist.h (stlport\stl\debug):  iterator insert_after(iterator __pos, const value_type& __x) {
+_slist.h (stlport\stl\debug):  iterator insert_after(iterator __pos) {
+_slist.h (stlport\stl\debug):  void insert_after(iterator __pos, size_type __n, const value_type& __x) {
+_slist.h (stlport\stl\debug):  void insert_after(iterator __pos, _InIter __first, _InIter __last) {
+_slist.h (stlport\stl\debug):  void insert(iterator __pos, _InIter __first, _InIter __last) {
+_slist.h (stlport\stl\debug):  void insert_after(iterator __pos,
+_slist.h (stlport\stl\debug):  void insert_after(iterator __pos,
+_slist.h (stlport\stl\debug):  void insert(iterator __pos, const_iterator __first, const_iterator __last) {
+_slist.h (stlport\stl\debug):  void insert(iterator __pos, const value_type* __first,
+_slist.h (stlport\stl\debug):  iterator insert(iterator __pos, const value_type& __x = _Tp()) {
+_slist.h (stlport\stl\debug):  iterator insert(iterator __pos, const value_type& __x) {
+_slist.h (stlport\stl\debug):  iterator insert(iterator __pos) {
+_slist.h (stlport\stl\debug):  void insert(iterator __pos, size_type __n, const value_type& __x) {
+_slist.h (stlport\stl\debug):  iterator erase_after(iterator __pos) {
+_slist.h (stlport\stl\debug):    iterator __tmp = __pos; ++__tmp;
+_slist.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.erase_after(__pos._M_iterator));
+_slist.h (stlport\stl\debug):  iterator erase_after(iterator __before_first, iterator __last) {
+_slist.h (stlport\stl\debug):    iterator __tmp = __before_first; ++__tmp;
+_slist.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.erase_after(__before_first._M_iterator, __last._M_iterator));
+_slist.h (stlport\stl\debug):  iterator erase(iterator __pos) {
+_slist.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.erase(__pos._M_iterator));
+_slist.h (stlport\stl\debug):  iterator erase(iterator __first, iterator __last) {
+_slist.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.erase(__first._M_iterator, __last._M_iterator));
+_slist.h (stlport\stl\debug):  void splice_after(iterator __pos, _Self& __x) {
+_slist.h (stlport\stl\debug):  void splice_after(iterator __pos, _Self& __x, iterator __prev) {
+_slist.h (stlport\stl\debug):    iterator __elem = __prev; ++__elem;
+_slist.h (stlport\stl\debug):  void splice_after(iterator __pos, _Self& __x,
+_slist.h (stlport\stl\debug):                    iterator __before_first, iterator __before_last) {
+_slist.h (stlport\stl\debug):    iterator __first = __before_first; ++__first;
+_slist.h (stlport\stl\debug):    iterator __last = __before_last; ++__last;
+_slist.h (stlport\stl\debug):  void splice(iterator __pos, _Self& __x) {
+_slist.h (stlport\stl\debug):  void splice(iterator __pos, _Self& __x, iterator __i) {
+_slist.h (stlport\stl\debug):  void splice(iterator __pos, _Self& __x, iterator __first, iterator __last) {
+_slist.h (stlport\stl\debug):        _Invalidate_iterator(iterator(&_M_iter_list, __first));
+_slist.h (stlport\stl\debug):        _Invalidate_iterator(iterator(&_M_iter_list, __next));
+_slist.h (stlport\stl\debug):        _Invalidate_iterator(iterator(&_M_iter_list, __first));
+_slist.h (stlport\stl\debug):        _Invalidate_iterator(iterator(&_M_iter_list, __next));
+_slist.h (stlport\stl\pointers):  typedef _STLP_PRIV _Slist_iterator<value_type, _Nonconst_traits<value_type> >  iterator;
+_slist.h (stlport\stl\pointers):  iterator before_begin()             { return iterator(_M_impl.before_begin()._M_node); }
+_slist.h (stlport\stl\pointers):  iterator begin()                    { return iterator(_M_impl.begin()._M_node); }
+_slist.h (stlport\stl\pointers):  iterator end()                      { return iterator(_M_impl.end()._M_node); }
+_slist.h (stlport\stl\pointers):  const_iterator end() const          { return iterator(_M_impl.end()._M_node); }
+_slist.h (stlport\stl\pointers):  iterator previous(const_iterator __pos)
+_slist.h (stlport\stl\pointers):  { return iterator(_M_impl.previous(_BaseConstIte(__pos._M_node))._M_node); }
+_slist.h (stlport\stl\pointers):  iterator insert_after(iterator __pos, const value_type& __x = _STLP_DEFAULT_CONSTRUCTED(value_type))
+_slist.h (stlport\stl\pointers):  iterator insert_after(iterator __pos, const value_type& __x)
+_slist.h (stlport\stl\pointers):  { return iterator(_M_impl.insert_after(_BaseIte(__pos._M_node),
+_slist.h (stlport\stl\pointers):  iterator insert_after(iterator __pos)
+_slist.h (stlport\stl\pointers):  { return iterator(_M_impl.insert_after(_BaseIte(__pos._M_node))._M_node);}
+_slist.h (stlport\stl\pointers):  void insert_after(iterator __pos, size_type __n, const value_type& __x)
+_slist.h (stlport\stl\pointers):  void _M_insert_after_dispatch(iterator __pos, _Integer __n, _Integer __val,
+_slist.h (stlport\stl\pointers):  void _M_insert_after_dispatch(iterator __pos,
+_slist.h (stlport\stl\pointers):  void insert_after(iterator __pos, _InputIterator __first, _InputIterator __last) {
+_slist.h (stlport\stl\pointers):  void insert_after(iterator __pos,
+_slist.h (stlport\stl\pointers):  void insert_after(iterator __pos,
+_slist.h (stlport\stl\pointers):  iterator insert(iterator __pos, const value_type& __x = _STLP_DEFAULT_CONSTRUCTED(value_type))
+_slist.h (stlport\stl\pointers):  iterator insert(iterator __pos, const value_type& __x)
+_slist.h (stlport\stl\pointers):  { return iterator(_M_impl.insert(_BaseIte(__pos._M_node),
+_slist.h (stlport\stl\pointers):  iterator insert(iterator __pos)
+_slist.h (stlport\stl\pointers):  { return iterator(_M_impl.insert(_BaseIte(__pos._M_node))._M_node); }
+_slist.h (stlport\stl\pointers):  void insert(iterator __pos, size_type __n, const value_type& __x)
+_slist.h (stlport\stl\pointers):  void _M_insert_dispatch(iterator __pos, _Integer __n, _Integer __val,
+_slist.h (stlport\stl\pointers):  void _M_insert_dispatch(iterator __pos,
+_slist.h (stlport\stl\pointers):  void insert(iterator __pos, _InputIterator __first, _InputIterator __last) {
+_slist.h (stlport\stl\pointers):  void insert(iterator __pos, const_iterator __first, const_iterator __last)
+_slist.h (stlport\stl\pointers):  void insert(iterator __pos, const value_type* __first, const value_type* __last)
+_slist.h (stlport\stl\pointers):  iterator erase_after(iterator __pos)
+_slist.h (stlport\stl\pointers):  { return iterator(_M_impl.erase_after(_BaseIte(__pos._M_node))._M_node); }
+_slist.h (stlport\stl\pointers):  iterator erase_after(iterator __before_first, iterator __last)
+_slist.h (stlport\stl\pointers):  { return iterator(_M_impl.erase_after(_BaseIte(__before_first._M_node),
+_slist.h (stlport\stl\pointers):  iterator erase(iterator __pos)
+_slist.h (stlport\stl\pointers):  { return iterator(_M_impl.erase(_BaseIte(__pos._M_node))._M_node); }
+_slist.h (stlport\stl\pointers):  iterator erase(iterator __first, iterator __last)
+_slist.h (stlport\stl\pointers):  { return iterator(_M_impl.erase(_BaseIte(__first._M_node), _BaseIte(__last._M_node))._M_node); }
+_slist.h (stlport\stl\pointers):  void splice_after(iterator __pos, _Self& __x,
+_slist.h (stlport\stl\pointers):                    iterator __before_first, iterator __before_last)
+_slist.h (stlport\stl\pointers):  void splice_after(iterator __pos, _Self& __x, iterator __prev)
+_slist.h (stlport\stl\pointers):  void splice_after(iterator __pos, _Self& __x)
+_slist.h (stlport\stl\pointers):  void splice(iterator __pos, _Self& __x)
+_slist.h (stlport\stl\pointers):  void splice(iterator __pos, _Self& __x, iterator __i)
+_slist.h (stlport\stl\pointers):  void splice(iterator __pos, _Self& __x, iterator __first, iterator __last)
+Slist_test.cpp (test\unit):#  include <iterator>
+Slist_test.cpp (test\unit):  slist<char>::iterator i;
+Slist_test.cpp (test\unit):  slist<int>::iterator slit;
+Slist_test.cpp (test\unit):    slist<int>::iterator slit(sl.begin());
+Slist_test.cpp (test\unit):    slist<int>::iterator slit(sl.begin());
+Slist_test.cpp (test\unit):    slist<int>::iterator slit;
+Slist_test.cpp (test\unit):    slist<int>::iterator slit;
+Slist_test.cpp (test\unit):  typedef slist<IncompleteClass>::iterator it;
+Std_headers.txt (etc):iterator
+_stream_iterator.h (stlport\stl):class istream_iterator : public iterator<input_iterator_tag, _Tp , _Dist,
+_stream_iterator.h (stlport\stl):class istream_iterator : public iterator<input_iterator_tag, _Tp , ptrdiff_t,
+_stream_iterator.h (stlport\stl):class istream_iterator : public iterator<input_iterator_tag, _Tp, _Dist ,
+_stream_iterator.h (stlport\stl):class ostream_iterator: public iterator<output_iterator_tag, void, void, void, void> {
+_string.c (stlport\stl):void basic_string<_CharT,_Traits,_Alloc>::insert(iterator __pos,
+_string.c (stlport\stl):void basic_string<_CharT,_Traits,_Alloc>::_M_insert(iterator __pos,
+_string.c (stlport\stl):basic_string<_CharT,_Traits,_Alloc> ::replace(iterator __first, iterator __last,
+_string.c (stlport\stl):basic_string<_CharT,_Traits,_Alloc> ::_M_replace(iterator __first, iterator __last,
+_string.c (stlport\stl):#  undef iterator
+_string.h (stlport\stl):  typedef value_type*       iterator;
+_string.h (stlport\stl):  iterator begin()             { return this->_M_Start(); }
+_string.h (stlport\stl):  iterator end()               { return this->_M_Finish(); }
+_string.h (stlport\stl):  iterator insert(iterator __p, _CharT __c) {
+_string.h (stlport\stl):  void insert(iterator __p, size_t __n, _CharT __c);
+_string.h (stlport\stl):  void _M_insert(iterator __p, const _CharT* __first, const _CharT* __last, bool __self_ref);
+_string.h (stlport\stl):  void _M_insert_overflow(iterator __pos, _ForwardIter __first, _ForwardIter __last,
+_string.h (stlport\stl):  void _M_insertT(iterator __p, _InputIter __first, _InputIter __last,
+_string.h (stlport\stl):  void _M_insertT(iterator __pos, _ForwardIter __first, _ForwardIter __last,
+_string.h (stlport\stl):  void _M_insert_dispatch(iterator __p, _Integer __n, _Integer __x,
+_string.h (stlport\stl):  void _M_insert_dispatch(iterator __p, _InputIter __first, _InputIter __last,
+_string.h (stlport\stl):  void insert(iterator __p, _InputIter __first, _InputIter __last) {
+_string.h (stlport\stl):  void insert(iterator __p, const _CharT* __f, const _CharT* __l) {
+_string.h (stlport\stl):  iterator erase(iterator __pos) {
+_string.h (stlport\stl):  iterator erase(iterator __first, iterator __last) {
+_string.h (stlport\stl):  _Self& replace(iterator __first, iterator __last, const _Self& __s) {
+_string.h (stlport\stl):  _Self& replace(iterator __first, iterator __last,
+_string.h (stlport\stl):  _Self& replace(iterator __first, iterator __last,
+_string.h (stlport\stl):  _Self& replace(iterator __first, iterator __last, size_type __n, _CharT __c);
+_string.h (stlport\stl):  _Self& _M_replace(iterator __first, iterator __last,
+_string.h (stlport\stl):  _Self& _M_replace_dispatch(iterator __first, iterator __last,
+_string.h (stlport\stl):  _Self& _M_replace_dispatch(iterator __first, iterator __last,
+_string.h (stlport\stl):  _Self& replace(iterator __first, iterator __last,
+_string.h (stlport\stl):  _Self& replace(iterator __first, iterator __last,
+_string.h (stlport\stl\debug):  iterator begin() { return iterator(&_M_iter_list, _M_non_dbg_impl.begin()); }
+_string.h (stlport\stl\debug):  iterator end() { return iterator(&_M_iter_list, _M_non_dbg_impl.end()); }
+_string.h (stlport\stl\debug):    return iterator(&_M_iter_list, __ret);
+_string.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.erase(__pos._M_iterator));
+_string.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.erase(__f._M_iterator, __l._M_iterator));
+_string_workaround.h (stlport\stl):  iterator insert(iterator __p, _CharT __c)
+_string_workaround.h (stlport\stl):  void insert(iterator __p, size_t __n, _CharT __c)
+_string_workaround.h (stlport\stl):  void insert(iterator __p, _InputIter __first, _InputIter __last) {
+_string_workaround.h (stlport\stl):  void insert(iterator __p, const _CharT* __f, const _CharT* __l) {
+_string_workaround.h (stlport\stl):  void _M_insert(iterator __p, const _CharT* __f, const _CharT* __l, bool __self_ref) {
+_string_workaround.h (stlport\stl):  void _M_insert_overflow(iterator __pos, _ForwardIter __first, _ForwardIter __last,
+_string_workaround.h (stlport\stl):  void _M_insertT(iterator __p, _InputIter __first, _InputIter __last,
+_string_workaround.h (stlport\stl):  void _M_insertT(iterator __pos, _ForwardIter __first, _ForwardIter __last,
+_string_workaround.h (stlport\stl):  void _M_insert_dispatch(iterator __p, _Integer __n, _Integer __x,
+_string_workaround.h (stlport\stl):  void _M_insert_dispatch(iterator __p, _InputIter __first, _InputIter __last,
+_string_workaround.h (stlport\stl):  iterator erase(iterator __pos) {
+_string_workaround.h (stlport\stl):  iterator erase(iterator __first, iterator __last) {
+_string_workaround.h (stlport\stl):  _Self& replace(iterator __first, iterator __last, const _Self& __s) {
+_string_workaround.h (stlport\stl):  _Self& replace(iterator __first, iterator __last,
+_string_workaround.h (stlport\stl):  _Self& replace(iterator __first, iterator __last,
+_string_workaround.h (stlport\stl):  _Self& replace(iterator __first, iterator __last,
+_string_workaround.h (stlport\stl):  _Self& replace(iterator __first, iterator __last,
+_string_workaround.h (stlport\stl):  _Self& replace(iterator __first, iterator __last,
+_string_workaround.h (stlport\stl):  _Self& _M_replace(iterator __first, iterator __last,
+_string_workaround.h (stlport\stl):  _Self& _M_replace_dispatch(iterator __first, iterator __last,
+_string_workaround.h (stlport\stl):  _Self& _M_replace_dispatch(iterator __first, iterator __last,
+Test_construct.h (test\eh):    gTestController.SetCurrentTestName("iterator range constructor");
+Test_hash_resize.h (test\eh):        gTestController.SetCurrentTestName("iterator range n-size constructor");
+Transform_test.cpp (test\unit):#include <iterator>
+_tree.c (stlport\stl):#  define __iterator__  _STLP_TYPENAME_ON_RETURN_TYPE _Rb_tree<_Key, _Compare, _Value, _KeyOfValue, _Traits, _Alloc>::iterator
+_tree.c (stlport\stl):  return iterator(__new_node);
+_tree.c (stlport\stl):  iterator __j = iterator(__y);
+_tree.c (stlport\stl):      return pair<iterator,bool>(_M_insert(__y, __val, /* __x*/ __y), true);
+_tree.c (stlport\stl):    return pair<iterator,bool>(_M_insert(__y, __val, __x), true);
+_tree.c (stlport\stl):  return pair<iterator,bool>(__j, false);
+_tree.c (stlport\stl):_Rb_tree<_Key,_Compare,_Value,_KeyOfValue,_Traits,_Alloc> ::insert_unique(iterator __position,
+_tree.c (stlport\stl):      iterator __after = __position;
+_tree.c (stlport\stl):    iterator __before = __position;
+_tree.c (stlport\stl):      iterator __after = __position;
+_tree.c (stlport\stl):_Rb_tree<_Key,_Compare,_Value,_KeyOfValue,_Traits,_Alloc> ::insert_equal(iterator __position,
+_tree.c (stlport\stl):      iterator __after = __position;
+_tree.c (stlport\stl):    iterator __before = __position;
+_tree.c (stlport\stl):      iterator __after = __position;
+_tree.c (stlport\stl):#undef iterator
+_tree.h (stlport\stl):  iterator begin() { return iterator(_M_leftmost()); }
+_tree.h (stlport\stl):  iterator end() { return iterator(&this->_M_header._M_data); }
+_tree.h (stlport\stl):  iterator find(const _KT& __k) { return iterator(_M_find(__k)); }
+_tree.h (stlport\stl):  iterator lower_bound(const _KT& __x) { return iterator(_M_lower_bound(__x)); }
+_tree.h (stlport\stl):  iterator upper_bound(const _KT& __x) { return iterator(_M_upper_bound(__x)); }
+_tree.h (stlport\stl\debug):  typedef _STLP_PRIV _DBG_iter<_Base, _STLP_PRIV _DbgTraits<_NonConstIteTraits> > iterator;
+_tree.h (stlport\stl\debug):  void _Invalidate_iterator(const iterator& __it)
+_tree.h (stlport\stl\debug):  void _Invalidate_iterators(const iterator& __first, const iterator& __last)
+_tree.h (stlport\stl\debug):  iterator begin() { return iterator(&_M_iter_list, _M_non_dbg_impl.begin()); }
+_tree.h (stlport\stl\debug):  iterator end() { return iterator(&_M_iter_list, _M_non_dbg_impl.end()); }
+_tree.h (stlport\stl\debug):  iterator find(const _KT& __k)
+_tree.h (stlport\stl\debug):  { return iterator(&_M_iter_list, _M_non_dbg_impl.find(__k)); }
+_tree.h (stlport\stl\debug):  iterator lower_bound(const _KT& __x)
+_tree.h (stlport\stl\debug):  { return iterator(&_M_iter_list, _M_non_dbg_impl.lower_bound(__x)); }
+_tree.h (stlport\stl\debug):  iterator upper_bound(const _KT& __x)
+_tree.h (stlport\stl\debug):  { return iterator(&_M_iter_list, _M_non_dbg_impl.upper_bound(__x)); }
+_tree.h (stlport\stl\debug):  pair<iterator,iterator> equal_range(const _KT& __x) {
+_tree.h (stlport\stl\debug):    return pair<iterator, iterator>(iterator(&_M_iter_list, _M_non_dbg_impl.lower_bound(__x)),
+_tree.h (stlport\stl\debug):                                    iterator(&_M_iter_list, _M_non_dbg_impl.upper_bound(__x)));
+_tree.h (stlport\stl\debug):  pair<iterator,iterator> equal_range_unique(const _KT& __x) {
+_tree.h (stlport\stl\debug):    return pair<iterator, iterator>(iterator(&_M_iter_list, __p.first), iterator(&_M_iter_list, __p.second));
+_tree.h (stlport\stl\debug):  pair<iterator,bool> insert_unique(const value_type& __x) {
+_tree.h (stlport\stl\debug):    return pair<iterator, bool>(iterator(&_M_iter_list, __res.first), __res.second);
+_tree.h (stlport\stl\debug):  iterator insert_equal(const value_type& __x)
+_tree.h (stlport\stl\debug):  { return iterator(&_M_iter_list, _M_non_dbg_impl.insert_equal(__x)); }
+_tree.h (stlport\stl\debug):  iterator insert_unique(iterator __pos, const value_type& __x) {
+_tree.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.insert_unique(__pos._M_iterator, __x));
+_tree.h (stlport\stl\debug):  iterator insert_equal(iterator __pos, const value_type& __x) {
+_tree.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.insert_equal(__pos._M_iterator, __x));
+_tree.h (stlport\stl\debug):  void erase(iterator __pos) {
+_tree.h (stlport\stl\debug):    pair<iterator, iterator> __p = equal_range(__x);
+_tree.h (stlport\stl\debug):      _Invalidate_iterator(iterator(&_M_iter_list, __i));
+_tree.h (stlport\stl\debug):  void erase(iterator __first, iterator __last) {
+Uninitialized_test.cpp (test\unit):      list<NotTrivialCopyStruct>::iterator it(dst.begin()), end(dst.end());
+Uninitialized_test.cpp (test\unit):      vector<NotTrivialCopyStruct>::iterator it(dst.begin()), end(dst.end());
+Uninitialized_test.cpp (test\unit):      vector<base*>::iterator it(dst.begin()), end(dst.end());
+_unordered_map.h (stlport\stl):  typedef typename _Ht::iterator iterator;
+_unordered_map.h (stlport\stl):  iterator begin() { return _M_ht.begin(); }
+_unordered_map.h (stlport\stl):  iterator end() { return _M_ht.end(); }
+_unordered_map.h (stlport\stl):  pair<iterator,bool> insert(const value_type& __obj)
+_unordered_map.h (stlport\stl):  iterator insert(const_iterator /*__hint*/, const value_type& __obj)
+_unordered_map.h (stlport\stl):  iterator find(const _KT& __key) { return _M_ht.find(__key); }
+_unordered_map.h (stlport\stl):    iterator __it = _M_ht.find(__key);
+_unordered_map.h (stlport\stl):  pair<iterator, iterator> equal_range(const _KT& __key)
+_unordered_map.h (stlport\stl):  typedef typename _Ht::iterator iterator;
+_unordered_map.h (stlport\stl):  iterator begin() { return _M_ht.begin(); }
+_unordered_map.h (stlport\stl):  iterator end() { return _M_ht.end(); }
+_unordered_map.h (stlport\stl):  iterator insert(const value_type& __obj)
+_unordered_map.h (stlport\stl):  iterator insert(const_iterator /*__hint*/, const value_type& __obj)
+_unordered_map.h (stlport\stl):  iterator find(const _KT& __key) { return _M_ht.find(__key); }
+_unordered_map.h (stlport\stl):  pair<iterator, iterator> equal_range(const _KT& __key)
+_unordered_set.h (stlport\stl):  typedef typename _Ht::iterator iterator;
+_unordered_set.h (stlport\stl):  iterator begin() { return _M_ht.begin(); }
+_unordered_set.h (stlport\stl):  iterator end() { return _M_ht.end(); }
+_unordered_set.h (stlport\stl):  pair<iterator, bool> insert(const value_type& __obj)
+_unordered_set.h (stlport\stl):  iterator insert(const_iterator /*__hint*/, const value_type& __obj)
+_unordered_set.h (stlport\stl):  iterator find(const _KT& __key) { return _M_ht.find(__key); }
+_unordered_set.h (stlport\stl):  pair<iterator, iterator> equal_range(const _KT& __key)
+_unordered_set.h (stlport\stl):  typedef typename _Ht::iterator iterator;
+_unordered_set.h (stlport\stl):  iterator begin() { return _M_ht.begin(); }
+_unordered_set.h (stlport\stl):  iterator end() { return _M_ht.end(); }
+_unordered_set.h (stlport\stl):  iterator insert(const value_type& __obj)
+_unordered_set.h (stlport\stl):  iterator insert(const_iterator /*__hint*/, const value_type& __obj)
+_unordered_set.h (stlport\stl):  iterator find(const _KT& __key) { return _M_ht.find(__key); }
+_unordered_set.h (stlport\stl):  pair<iterator, iterator> equal_range(const _KT& __key)
+Unordered_test.cpp (test\unit):  typedef unordered_set<IncompleteClass>::iterator usit;
+Unordered_test.cpp (test\unit):  typedef unordered_multiset<IncompleteClass>::iterator usmit;
+Unordered_test.cpp (test\unit):  typedef unordered_map<IncompleteClass, IncompleteClass>::iterator umit;
+Unordered_test.cpp (test\unit):  typedef unordered_multimap<IncompleteClass, IncompleteClass>::iterator ummit;
+_vector.c (stlport\stl):#  define __iterator__  _STLP_TYPENAME_ON_RETURN_TYPE vector<_Tp, _Alloc>::iterator
+_vector.c (stlport\stl):void vector<_Tp, _Alloc>::_M_fill_insert_aux(iterator __pos, size_type __n,
+_vector.c (stlport\stl):  iterator __src = this->_M_finish - 1;
+_vector.c (stlport\stl):  iterator __dst = __src + __n;
+_vector.c (stlport\stl):void vector<_Tp, _Alloc>::_M_fill_insert_aux (iterator __pos, size_type __n,
+_vector.c (stlport\stl):void vector<_Tp, _Alloc>::_M_fill_insert(iterator __pos,
+_vector.c (stlport\stl):vector<_Tp, _Alloc>::insert(iterator __pos, const _Tp& __x) {
+_vector.h (stlport\stl):  typedef value_type* iterator;
+_vector.h (stlport\stl):  iterator begin()             { return this->_M_start; }
+_vector.h (stlport\stl):  iterator end()               { return this->_M_finish; }
+_vector.h (stlport\stl):      iterator __tmp = _M_allocate_and_copy(__n, __first, __last);
+_vector.h (stlport\stl):      iterator __new_finish = copy(__first, __last, this->_M_start);
+_vector.h (stlport\stl):    iterator __cur = begin();
+_vector.h (stlport\stl):  iterator insert(iterator __pos, const _Tp& __x = _STLP_DEFAULT_CONSTRUCTED(_Tp));
+_vector.h (stlport\stl):  iterator insert(iterator __pos) { return insert(__pos, _STLP_DEFAULT_CONSTRUCTED(_Tp)); }
+_vector.h (stlport\stl):  void _M_fill_insert_aux (iterator __pos, size_type __n, const _Tp& __x, const __true_type& /*_Movable*/);
+_vector.h (stlport\stl):  void _M_fill_insert_aux (iterator __pos, size_type __n, const _Tp& __x, const __false_type& /*_Movable*/);
+_vector.h (stlport\stl):  void _M_fill_insert (iterator __pos, size_type __n, const _Tp& __x);
+_vector.h (stlport\stl):  void _M_range_insert_realloc(iterator __pos,
+_vector.h (stlport\stl):  void _M_range_insert_aux(iterator __pos,
+_vector.h (stlport\stl):    iterator __src = this->_M_finish - 1;
+_vector.h (stlport\stl):    iterator __dst = __src + __n;
+_vector.h (stlport\stl):  void _M_range_insert_aux(iterator __pos,
+_vector.h (stlport\stl):  void _M_insert_dispatch(iterator __pos, _Integer __n, _Integer __val,
+_vector.h (stlport\stl):  void _M_insert_dispatch(iterator __pos,
+_vector.h (stlport\stl):  void insert(iterator __pos, _InputIterator __first, _InputIterator __last) {
+_vector.h (stlport\stl):  void _M_range_insert(iterator __pos,
+_vector.h (stlport\stl):  void _M_range_insert(iterator __pos,
+_vector.h (stlport\stl):  void insert (iterator __pos, size_type __n, const _Tp& __x)
+_vector.h (stlport\stl):  iterator _M_erase(iterator __pos, const __true_type& /*_Movable*/) {
+_vector.h (stlport\stl):    iterator __dst = __pos, __src = __dst + 1;
+_vector.h (stlport\stl):    iterator __end = end();
+_vector.h (stlport\stl):  iterator _M_erase(iterator __pos, const __false_type& /*_Movable*/) {
+_vector.h (stlport\stl):  iterator _M_erase(iterator __first, iterator __last, const __true_type& /*_Movable*/) {
+_vector.h (stlport\stl):    iterator __dst = __first, __src = __last;
+_vector.h (stlport\stl):    iterator __end = end();
+_vector.h (stlport\stl):  iterator _M_erase(iterator __first, iterator __last, const __false_type& /*_Movable*/) {
+_vector.h (stlport\stl):  iterator erase(iterator __pos) {
+_vector.h (stlport\stl):  iterator erase(iterator __first, iterator __last) {
+_vector.h (stlport\stl\debug):  void _Invalidate_iterator(const iterator& __it)
+_vector.h (stlport\stl\debug):  void _Invalidate_iterators(const iterator& __first, const iterator& __last)
+_vector.h (stlport\stl\debug):  iterator begin()             { return iterator(&_M_iter_list, _M_non_dbg_impl.begin()); }
+_vector.h (stlport\stl\debug):  iterator end()               { return iterator(&_M_iter_list, _M_non_dbg_impl.end()); }
+_vector.h (stlport\stl\debug):  iterator insert(iterator __pos, const _Tp& __x = _Tp()) {
+_vector.h (stlport\stl\debug):  iterator insert(iterator __pos, const _Tp& __x) {
+_vector.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.insert(__pos._M_iterator, __x));
+_vector.h (stlport\stl\debug):  iterator insert(iterator __pos)
+_vector.h (stlport\stl\debug):  void insert(iterator __pos,
+_vector.h (stlport\stl\debug):  void insert (iterator __pos,
+_vector.h (stlport\stl\debug):  void insert(iterator __pos,
+_vector.h (stlport\stl\debug):  void insert(iterator __pos,
+_vector.h (stlport\stl\debug):              iterator __first, iterator __last) {
+_vector.h (stlport\stl\debug):  void insert (iterator __pos, size_type __n, const _Tp& __x){
+_vector.h (stlport\stl\debug):  iterator erase(iterator __pos) {
+_vector.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.erase(__pos._M_iterator));
+_vector.h (stlport\stl\debug):  iterator erase(iterator __first, iterator __last) {
+_vector.h (stlport\stl\debug):    return iterator(&_M_iter_list, _M_non_dbg_impl.erase(__first._M_iterator, __last._M_iterator));
+_vector.h (stlport\stl\pointers):  typedef value_type* iterator;
+_vector.h (stlport\stl\pointers):  iterator begin()             { return cast_traits::to_value_type_ptr(_M_impl.begin()); }
+_vector.h (stlport\stl\pointers):  iterator end()               { return cast_traits::to_value_type_ptr(_M_impl.end()); }
+_vector.h (stlport\stl\pointers):  iterator insert(iterator __pos, const value_type& __x = _STLP_DEFAULT_CONSTRUCTED(value_type))
+_vector.h (stlport\stl\pointers):  iterator insert(iterator __pos, const value_type& __x)
+_vector.h (stlport\stl\pointers):  iterator insert(iterator __pos)
+_vector.h (stlport\stl\pointers):  void insert(iterator __pos, _InputIterator __first, _InputIterator __last)
+_vector.h (stlport\stl\pointers):  void insert(iterator __pos, const_iterator __first, const_iterator __last) {
+_vector.h (stlport\stl\pointers):  void insert (iterator __pos, size_type __n, const value_type& __x) {
+_vector.h (stlport\stl\pointers):  iterator erase(iterator __pos)
+_vector.h (stlport\stl\pointers):  iterator erase(iterator __first, iterator __last) {
+Vector_test.cpp (test\unit):    vector<vector<int> >::iterator it(vect.begin()), end(vect.end());
+Vector_test.cpp (test\unit):  vector<int>::iterator vit;
+Vector_test.cpp (test\unit):  vector<int>::iterator vit;
+Vector_test.cpp (test\unit):  vector<vector<int> >::iterator vvit(v_v_int.begin()), vvitEnd(v_v_int.end());
+Vector_test.cpp (test\unit):  typedef vector<IncompleteClass>::iterator it;

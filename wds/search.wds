@@ -1,0 +1,14 @@
+.for(r $t0=0; @$t0<=${$arg1}; r $t0=@$t0+1)
+{
+	aS Tid "@$t0"
+	.block
+	{
+		aS change ~${Tid}s
+		.block
+		{
+			${change}
+		}
+		ad /q change
+	}
+	ad /q Tid
+}

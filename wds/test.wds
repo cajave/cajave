@@ -1,0 +1,4 @@
+r eax; r ebx;
+r $.u0 = This is just a line
+.printf "$u0"
+r ecx; r edx

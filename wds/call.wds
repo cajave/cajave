@@ -1,0 +1,28 @@
+.printf "\n==================Script Name==================\n"
+.printf @"${$arg1}"
+.printf "\n===============================================\n"
+
+aS val1 ${$arg1}
+aS /x val2 ${$arg2}
+aS /x val3 ${$arg3}
+
+.block
+{
+	.printf "\n==========Start to parse Aliases===========\n"
+	.printf @"${/n:val1} = ${val1}"
+	.printf "\n"
+	.printf @"${/n:val2} = ${val2}"
+	.printf "\n"
+	.printf @"${/n:val3} = ${val3}"
+	.printf "\n===========End to  parse  Aliases==========\n"
+}
+
+.block
+{
+	.printf "\n==================Call start===============\n"
+	$$>a<${val1} ${val2} ${val3}
+	.printf "\n===================Call end================\n"
+}
+ad /q val1
+ad /q val2
+ad /q val3
