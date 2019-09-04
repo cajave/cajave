@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
  
-int indx;
+int index;
  
 int main(int argc, char *argv[])
 {
