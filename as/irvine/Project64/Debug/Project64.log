@@ -1,0 +1,12 @@
+﻿  Assembling ..\ch03\AddTwoSum_64.asm...
+..\ch03\AddTwoSum_64.asm(5): error A2013: .MODEL must precede this directive
+..\ch03\AddTwoSum_64.asm(6): error A2034: must be in segment block
+..\ch03\AddTwoSum_64.asm(8): error A2013: .MODEL must precede this directive
+..\ch03\AddTwoSum_64.asm(9): error A2034: must be in segment block : main
+..\ch03\AddTwoSum_64.asm(10): error A2034: must be in segment block
+..\ch03\AddTwoSum_64.asm(11): error A2034: must be in segment block
+..\ch03\AddTwoSum_64.asm(12): error A2034: must be in segment block
+..\ch03\AddTwoSum_64.asm(14): error A2034: must be in segment block
+..\ch03\AddTwoSum_64.asm(15): error A2034: must be in segment block
+..\ch03\AddTwoSum_64.asm(16): fatal error A1010: unmatched block nesting : main
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\BuildCustomizations\masm.targets(69,5): error MSB3721: The command "ml.exe /c /nologo /Zi /Fo"Debug\AddTwoSum_64.obj" /W3 /errorReport:prompt  /Ta..\ch03\AddTwoSum_64.asm" exited with code 1.
