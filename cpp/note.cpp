@@ -9,6 +9,8 @@
 #define DSTKEY "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Windows"
 #define USB "SYSTEM\\CurrentControlSet\\Enum\\USB"
 #define USBSTORE "SYSTEM\\CurrentControlSet\\Enum\\USBSTOR"
+#define SYSENV "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment"
+#define USRENV "HKCU\\Environment"
 
 RegOpenKeyEx(HKEY_LOCAL_MACHINE,
 			DSTKEY,
