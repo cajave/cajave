@@ -108,6 +108,8 @@ int OsTimer::Stop() { return impl_->Stop(); }
 
 #ifndef _TIMER_H
 #define _TIMER_H
+#include <iostream>
+#include <stdlib.h>
 #include <algorithm>
 #include <chrono>
 #include <condition_variable>
@@ -118,28 +120,31 @@ int OsTimer::Stop() { return impl_->Stop(); }
 #include <thread>
 #include <vector>
 #include <atomic>//std::atomic_flag
-namespace timer {
-using timer_t = std::size_t;
-using handler_t = std::function<void(timer_t)>;
-using clock = std::chrono::steady_clock;
-using time_p = std::chrono::time_point<clock>;
-using duration = std::chrono::microseconds;
-using scoped_m = std::unique_lock<std::mutex>;
 
-namespace detail {
+namespace timer_unit
+{
+using t_id_t = std::size_t;
+using t_handler_t = std::function<void(t_id_t)>;
+using t_clk_t = std::chrono::steady_clock;
+using t_tp_t = std::chrono::time_point<t_clk_t>;
+using t_duration_t = std::chrono::microseconds;
+using t_mutex_t = std::mutex;
+using t_uni_lk_t = std::unique_lock<t_mutex_t>;
+
+namespace detail
+{
 struct Event { // 可以传给定时器处理，也可以传给其他handler处理
-	timer_t id;
-	time_p start;
-	duration period;
-	handler_t handler;
+	t_id_t id;
+	t_tp_t start;
+	t_duration_t period;
+	t_handler_t handler;
 	bool valid;//timer是否释放
-	Event()
-	: id(0), start(duration::zero()), period(duration::zero()),
-	handler(nullptr), valid(false) {}
+	Event() : id(0), start(t_duration_t::zero()),
+		period(t_duration_t::zero()), handler(nullptr), valid(false) {}
 	template <typename Func>
-	Event(timer_t id, time_p start, duration period, Func &&handler)
-	: id(id), start(start), period(period),
-	handler(std::forward<Func>(handler)), valid(true) {}
+	Event(t_id_t id, t_tp_t start, t_duration_t period, Func &&handler)
+		: id(id), start(start), period(period),
+		  handler(std::forward<Func>(handler)), valid(true) {}
 	Event(Event &&r) = default;
 	Event &operator=(Event &&ev) = default;
 	Event(const Event &r) = delete;
@@ -147,41 +152,46 @@ struct Event { // 可以传给定时器处理，也可以传给其他handler处�
 };
 
 struct TimeEvent {
-	time_p next; // 下一次触发的时间
-	timer_t id; // 为什么不用Event*或者Event&
+	t_tp_t next; // 下一次触发的时间
+	t_id_t id; // 为什么不用Event*或者Event&
 };
 
-inline bool operator<(const TimeEvent &l, const TimeEvent &r) {
-	return l.next < r.next;
-}
+inline bool operator<(const TimeEvent &l, const TimeEvent &r) {return l.next < r.next;}
 }
 
-class Timer {
-	using worker_t = std::thread;
-	using safe_flag = std::atomic_flag;
+class Timer
+{
+	using t_worker_t = std::thread;
+	using t_safe_flag_t = std::atomic_flag;// 无锁
+	using t_cv_t = std::condition_variable;
+
 public:
-	Timer() : mutex_{}, cond_{}, worker_{}, events_{}, time_events_{}, free_ids_{} {
-		stop_ = ATOMIC_FLAG_INIT;//只能用operator=运算符
-		scoped_m lock(mutex_);
-		worker_ = worker_t(std::bind(&Timer::Run, this));
+	Timer() : mutex_{}, cond_{}, worker_{}, events_{}, time_events_{}, free_ids_{}
+		, stop_(ATOMIC_FLAG_INIT) //编译通过,将std::atomic_flag 初始化为false
+	{
+		//stop_ = ATOMIC_FLAG_INIT;//只能用operator=运算符//编译失败
+		while(stop_.test_and_set(std::memory_order_acquire));//原子地设置标志为true并获得其先前值
+		t_uni_lk_t lock(mutex_);
+		worker_ = t_worker_t(std::bind(&Timer::Run, this));
+		//std::cout << "Timer construct! ";
 	}
-	
-	~Timer() {
-		stop_.clear(std::memory_order_release); // 释放锁
-		scoped_m lock(mutex_);
+
+	~Timer()
+	{
+		stop_.clear(std::memory_order_release); // 原子地设置标志为false
+		t_uni_lk_t lock(mutex_);
 		worker_.join();
 		events_.clear();
 		time_events_.clear();
-		while (!free_ids_.empty()) {
-			free_ids_.pop();
-		}
+		while (!free_ids_.empty()) {free_ids_.pop();}
 		cond_.notify_all();//notify_all只是发通知，释放锁操作由局部锁执行。
 	}
-
-	timer_t Add(const time_p &when, handler_t &&handler,
-				const duration &period = duration::zero()) {
-		scoped_m lock(mutex_);
-		timer_t id = 0;
+	
+	t_id_t Add(const t_tp_t &when, t_handler_t &&handler,
+	           const t_duration_t &period = t_duration_t::zero())
+	{
+		t_uni_lk_t lock(mutex_);
+		t_id_t id = 0;
 		if (free_ids_.empty()) {
 			id = events_.size();
 			detail::Event e(id, when, period, std::move(handler));
@@ -197,20 +207,23 @@ public:
 		return id;
 	}
 	template <class Rep, class Period>
-	timer_t Add(const std::chrono::duration<Rep, Period> &when,
-				handler_t &&handler, const duration &period = duration::zero()) {
-		return Add(clock::now() +
-				std::chrono::duration_cast<std::chrono::microseconds>(when),
-				std::move(handler), period);
+	t_id_t Add(const std::chrono::duration<Rep, Period> &when,
+	           t_handler_t &&handler,
+	           const t_duration_t &period = t_duration_t::zero())
+	{
+		return Add(t_clk_t::now() +
+		           std::chrono::duration_cast<std::chrono::microseconds>(when),
+		           std::move(handler), period);
 	}
-	bool Remove(timer_t id) {
-		scoped_m lock(mutex_);
-		if (events_.size().empty() || events_.size() < id) {
+	bool Remove(t_id_t id)
+	{
+		t_uni_lk_t lock(mutex_);
+		if (events_.empty() || events_.size() < id) {
 			return false;
 		}
 		events_[id].valid = false;
 		auto it = std::find_if(time_events_.begin(), time_events_.end(),
-			[&](const detail::TimeEvent &te) { return te.id == id; });
+		[&](const detail::TimeEvent &te) {return te.id == id;});
 		if (it != time_events_.end()) {
 			free_ids_.push(it->id);
 			time_events_.erase(it);
@@ -218,16 +231,19 @@ public:
 		cond_.notify_all();
 		return true;
 	}
-	
+
 private:
-	void Run() {
-		while (stop_.test_and_set(std::memory_order_acquire)) {//自旋锁住
-			scoped_m lock(mutex_);
+	void Run()
+	{
+		//std::cout << "timer runs! ";
+		while (stop_.test_and_set(std::memory_order_acquire)) {
+			t_uni_lk_t lock(mutex_);
+			//std::cout << "time events pass! ";
 			if (time_events_.empty()) {
 				cond_.wait(lock);
 			} else {
 				detail::TimeEvent te = *time_events_.begin();
-				if (clock::now() >= te.next) {
+				if (t_clk_t::now() >= te.next) {
 					time_events_.erase(time_events_.begin());
 					if (events_[te.id].valid && events_[te.id].period.count() > 0) {
 						te.next += events_[te.id].period;
@@ -243,16 +259,27 @@ private:
 				}
 			}
 		}
-	}	
+	}
 private:
-	std::mutex mutex_;
-	std::condition_variable cond_;
-	worker_t worker_;
-	safe_flag stop_;
+	t_mutex_t mutex_;
+	t_cv_t cond_;
+	t_worker_t worker_;
+	t_safe_flag_t stop_;// = ATOMIC_FLAG_INIT;编译通过
 	std::vector<detail::Event> events_;//事件池，存储有效和失效的事件
-	std::set<detail::TimeEvent> time_events_;
-	std::stack<timer_t> free_ids_;//存储已释放的timer的id
+	std::set<detail::TimeEvent> time_events_;//定时器事件池
+	std::stack<t_id_t> free_ids_;//存储已释放的timer的id
 };
 }
-
 #endif
+int main(int argc, char **argv)
+{
+	timer_unit::Timer timer;
+	timer.Add(timer_unit::t_clk_t::now(), [](timer_unit::t_id_t id) {std::cout << "id:" << id << std::endl;}, std::chrono::seconds(5));
+	timer.Add(timer_unit::t_clk_t::now(), [](timer_unit::t_id_t id) {std::cout << "id:" << id << std::endl;}, std::chrono::seconds(10));
+	timer.Add(timer_unit::t_clk_t::now(), [](timer_unit::t_id_t id) {std::cout << "id:" << id << std::endl;}, std::chrono::seconds(15));
+	timer.Add(std::chrono::minutes(1), [&timer](timer_unit::t_id_t id) {timer.Remove(0); timer.Remove(1); timer.Remove(2);});
+	std::cout << "Hello World" << std::endl;
+	while(true);
+	//getchar();
+	return 0;
+}
