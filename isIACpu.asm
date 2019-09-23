@@ -16,18 +16,18 @@
 		
 		mov rcx, 04h
 		xor rax, rax
-		lea rdi, [rbp-010h]
+		lea rdi, [rbp-38h]
 		cld
 		rep stosd
 		
 		cpuid
-		mov [rbp-010h], ebx
-		mov [rbp-0ch], edx
-		mov [rbp-08h], ecx
+		mov [rbp-038h], ebx
+		mov [rbp-034h], edx
+		mov [rbp-030h], ecx
 		
 		lea rsi, byte ptr[VERIFY] ; offset VERIFY
 		mov rcx, -1
-		lea rdi, [rbp-010h]
+		lea rdi, [rbp-038h]
 		cld
 		repne cmpsb
 		
@@ -61,16 +61,16 @@ end
 000000013FFA13A9  sub         rsp,10h  
 000000013FFA13AD  mov         rcx,4  
 000000013FFA13B4  xor         rax,rax  
-000000013FFA13B7  lea         rdi,[rbp-10h]  
+000000013FFA13B7  lea         rdi,[rbp-38h]  
 000000013FFA13BB  cld  
 000000013FFA13BC  rep stos    dword ptr [rdi]  
 000000013FFA13BE  cpuid  
-000000013FFA13C0  mov         dword ptr [rbp-10h],ebx  
-000000013FFA13C3  mov         dword ptr [rbp-0Ch],edx  
-000000013FFA13C6  mov         dword ptr [rbp-8],ecx  
+000000013FFA13C0  mov         dword ptr [rbp-38h],ebx  
+000000013FFA13C3  mov         dword ptr [rbp-34h],edx  
+000000013FFA13C6  mov         dword ptr [rbp-30h],ecx  
 000000013FFA13C9  lea         rsi,[__NULL_IMPORT_DESCRIPTOR+1AACh (013FFB2000h)]  
 000000013FFA13D0  mov         rcx,0FFFFFFFFFFFFFFFFh  
-000000013FFA13D7  lea         rdi,[rbp-10h]  
+000000013FFA13D7  lea         rdi,[rbp-38h]  
 000000013FFA13DB  cld  
 000000013FFA13DC  repne cmps  byte ptr [rsi],byte ptr [rdi]  
 000000013FFA13DE  xor         rax,rax  
