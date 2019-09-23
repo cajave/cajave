@@ -29,7 +29,7 @@
 		mov rcx, -1
 		lea rdi, [rbp-038h]
 		cld
-		repne cmpsb
+		repe cmpsb
 		
 		xor rax, rax
 		sete al
@@ -72,7 +72,7 @@ end
 000000013FFA13D0  mov         rcx,0FFFFFFFFFFFFFFFFh  
 000000013FFA13D7  lea         rdi,[rbp-38h]  
 000000013FFA13DB  cld  
-000000013FFA13DC  repne cmps  byte ptr [rsi],byte ptr [rdi]  
+000000013FFA13DC  repe cmps  byte ptr [rsi],byte ptr [rdi]  
 000000013FFA13DE  xor         rax,rax  
 000000013FFA13E1  sete        al  
 000000013FFA13E4  add         rsp,10h  
